@@ -1,7 +1,7 @@
 //---------------------
 //-----GLOBAL VARIABLES
 //---------------------
-let gold = 50;
+let money = 50;
 let contest;
 
 
@@ -13,7 +13,7 @@ const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
 const button4 = document.querySelector("#button4");
 const locationText = document.querySelector("#locationText");
-const goldText = document.querySelector("#goldText");
+const goldText = document.querySelector("#moneyText");
 const text = document.querySelector("#text");
 
 
