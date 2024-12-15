@@ -1,0 +1,50 @@
+*{
+    --color1: #0c0890;
+    --color2: #00a0c1; /*rgba(0,160,193,1)*/
+    --color3: rgb(194, 194, 0);
+}
+
+body{
+    background-image: linear-gradient(to bottom right, var(--color1), var(--color2));
+    min-height: 100dvh;
+    width: 100%;
+    margin: 0;
+}
+
+#game{
+    background-color: rgba(0,160,193,.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+}
+
+#stats{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stat{
+    color: var(--color3);
+}
+
+#text{
+    color: white;
+    margin-bottom: 20px;
+}
+
+#controls{
+    display: flex;
+    justify-content: space-around;
+}
+
+#controls button{
+    border-radius: 10px;
+    cursor: pointer;
+    width: calc(70px / 2 * 3);
+    height: 70px;
+}
