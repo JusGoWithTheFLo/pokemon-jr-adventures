@@ -3,6 +3,7 @@
 //---------------------
 let money = 50;
 let contest;
+let currentLocation = "Home";
 
 
 //---------------------
@@ -16,6 +17,8 @@ const locationText = document.querySelector("#locationText");
 const goldText = document.querySelector("#moneyText");
 const text = document.querySelector("#text");
 
+const testText = document.querySelector("#testText");
+
 
 //---------------------
 //-----OBJECTS
@@ -26,9 +29,10 @@ const locations = [
         name: "Home",
         "button text": ["Instructions", "", "Pick Chapter", "Start Adventure!"],
         "button functions": [goHowTo1, "", pickChapter, startAdventure],
-        text: ["Welcome to Pokemon Jr Adventures FLO.EX, a game where you and your children tell a story together!",
+        text: ["<p>Welcome to Pokemon Jr Adventures FLO.EX, a game where you and your children tell a story together!</p>",
             "<p>Tap on \"Setup\", \"Gameplay\", or \"Contest Rules\" to read instructions on how to play this game.</p>",
-            "<p>Tap on \"Start Adventure!\" when you and your trainers are ready to begin!</p>"]
+            "<p>Tap on \"Start Adventure!\" when you and your trainers are ready to begin!</p>",
+            "<img class='home-image' src='/images/pikachu-and-mimikyu.png'>"]
     },
     {
         name: "A Note to Parents",
@@ -168,12 +172,12 @@ button2.onclick = goHowTo1;
 button3.onclick = pickChapter;
 button4.onclick = startAdventure;
 
-/*
+
 //---------------------
 //-----UPDATE FUNCTION
 //---------------------
 function update(location){
-    locationText.innerText = location.name;
+    locationText.innerText = currentLocation;
     text.innerHTML = location.text.join(" ");
     button1.innerText = location["button text"][0];
     button2.innerText = location["button text"][1];
@@ -189,7 +193,10 @@ function update(location){
 //---------------------
 //-----GAMEPLAY FUNCTIONS
 //---------------------
+
+//---------------HOME-------------------
 function goHome(){
+    currentLocation = "Home";
     update(locations[0]);
 }
 function goHowTo1(){ //a note to parents
@@ -230,89 +237,4 @@ function pickChapter(){
 
 function startAdventure(){
     update(locations[10]);
-}
-*/
-
-
-
-
-//name = "Object";
-//locations.filter(item => item.name === name);
-
-function update(location){
-    locationText.innerText = location.name;
-    text.innerHTML = location.text.join(" ");
-    button1.innerText = location["button text"][0];
-    button2.innerText = location["button text"][1];
-    button3.innerText = location["button text"][2];
-    button4.innerText = location["button text"][3];
-    button1.onclick = location["button functions"][0];
-    button2.onclick = location["button functions"][1];
-    button3.onclick = location["button functions"][2];
-    button4.onclick = location["button functions"][3];
-};
-
-function goHome(){
-    loc = "Home";
-    location = locations.find(item => item.name === loc);
-    update(location);
-}
-function goHowTo1(){ //a note to parents
-    loc = "A Note To Parents";
-    location = locations.find(item => item.name = loc) + 1;
-    update(locations[location]);
-};
-
-function goHowTo2(){ //table of contents
-    loc = "Home";
-    location = locations.find(item => item.name === loc);
-    update(locations[location]);
-}
-
-function goHowTo3(){ //object
-    loc = "Home";
-    location = locations.find(item => item.name === loc);
-    update(location);
-}
-
-function goHowTo4(){ //setup
-    loc = "Home";
-    location = locations.find(item => item.name === loc);
-    update(location);
-}
-
-function goHowTo5(){ //gameplay
-    loc = "Home";
-    location = locations.find(item => item.name === loc);
-    update(location);
-}
-
-function goHowTo6(){ //pokemon contest rules
-    loc = "Home";
-    location = locations.filter(item => item.name === loc);
-    update(location);
-}
-
-function goHowTo7(){ //pokemon contest example
-    loc = "Home";
-    location = locations.filter(item => item.name === loc);
-    update(location);
-}
-
-function goHowTo8(){ //telling stories with pokemon
-    loc = "Home";
-    location = locations.filter(item => item.name === loc);
-    update(location);
-}
-
-function pickChapter(){
-    loc = "Home";
-    location = locations.filter(item => item.name === loc);
-    update(location);
-}
-
-function startAdventure(){
-    loc = "Home";
-    location = locations.filter(item => item.name === loc);
-    update(location);
 }
