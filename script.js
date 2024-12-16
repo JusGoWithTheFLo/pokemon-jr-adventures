@@ -23,8 +23,11 @@ const testText = document.querySelector("#testText");
 //---------------------
 //-----OBJECTS
 //---------------------
-//-----LOCATIONS-----
+//-------------------------LOCATIONS-------------------------
 const locations = [
+    //--------------------------------------------------
+    //----------------------HOME------------------------
+    //--------------------------------------------------
     {
         name: "Home",
         "button text": ["Instructions", "", "Pick Chapter", "Start Adventure!"],
@@ -160,8 +163,9 @@ const locations = [
             "<p><b>Gameplay</b>  <b class='gp'>This text is colored so that you know it is different from the read-aloud text.  Don't read this text out loud.  Instead, follow the gameplay advice it provides.  It tells you when to run Pokemon Contests and describes other game-related events.</b></p>",
             "<p>This symbol <img class='stop' src='/images/stop.webp'> means you've reached the end of an episode.</p>",
             "<p>Whenever you and the Trainers are ready, tap on \"Start Adventure!\" to start playing!</p>"]
-    },
+    }
 ];
+//-------------------------EPISODES-------------------------
 
 
 //---------------------
