@@ -2,6 +2,8 @@
     --color1: #0c0890;
     --color2: #00a0c1; /*rgba(0,160,193,1)*/
     --color3: rgb(194, 194, 0);
+    --color4: rgb(190, 4, 190);
+    --color5: rgb(110, 140, 190);
 }
 
 body{
@@ -37,6 +39,12 @@ body{
     margin-bottom: 20px;
 }
 
+#text a,
+#text a:visited{
+    color: var(--color3);
+    cursor: pointer;
+}
+
 #controls{
     display: flex;
     justify-content: space-around;
@@ -47,4 +55,21 @@ body{
     cursor: pointer;
     width: calc(70px / 2 * 3);
     height: 70px;
+}
+
+b{
+    color: var(--color4);
+}
+
+b.ra{
+    color: white;
+}
+
+b.gp{
+    color: var(--color5);
+}
+
+.stop{
+    height: 42px;
+    margin: 0;
 }
