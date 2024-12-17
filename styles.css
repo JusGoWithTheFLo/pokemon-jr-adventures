@@ -40,7 +40,7 @@ body{
 
 #text{
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 }
 
 #text a,
@@ -112,4 +112,76 @@ b.gp{
 .stop{
     height: 42px;
     margin: 0;
+}
+
+/*-----DICE-----*/
+#actionScreen{
+    background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
+    display: none;
+    flex-direction: column;
+    height: 100dvh;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100dvw;
+    z-index: 2;
+}
+
+#actionBox{
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    height: 30vh;
+    max-height: 500px;
+    margin: 30vh auto 0 auto;
+    width: 60vw;
+    max-width: 500px;
+}
+
+#action{
+    font-size: 60px;
+    margin: auto;
+}
+
+#actionScreen button{
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin: 10px auto;
+    width: calc(90px / 2 * 3);
+    height: 70px;
+}
+
+#action_button1{
+    background-image: var(--button1-color);
+}
+
+/*-----ANIMATIONS-----*/
+.fade-in{
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+    animation-name: fade-in;
+}
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    } to {
+        opacity: 100;
+    }
+}
+
+.fade-out{
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+    animation-name: fade-out;
+}
+@keyframes fade-out{
+    from{
+        opacity: 100;
+    } to {
+        opacity: 0;
+    }
 }

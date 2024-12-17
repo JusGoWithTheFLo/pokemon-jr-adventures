@@ -5,7 +5,6 @@ let money = 50;
 let contest;
 let currentLocation = "Home";
 
-
 //---------------------
 //-----HTML SELECTORS
 //---------------------
@@ -16,6 +15,10 @@ const button4 = document.querySelector("#button4");
 const locationText = document.querySelector("#locationText");
 const goldText = document.querySelector("#moneyText");
 const text = document.querySelector("#text");
+const actionScreen = document.querySelector("#actionScreen");
+const action = document.querySelector("#action");
+const action_button1 = document.querySelector("#action_button1");
+const action_button2 = document.querySelector("#action_button2");
 
 const testText = document.querySelector("#testText");
 
@@ -31,11 +34,11 @@ const locations = [
     {
         name: "Home",
         "button text": ["Instructions", "", "Pick Chapter", "Start Adventure!"],
-        "button functions": [goHowTo1, "", pickChapter, startAdventure],
+        "button functions": [goHowTo1, "", pickChapter, goEpisode1],
         text: ["<p>Welcome to Pokemon Jr Adventures FLO.EX, a game where you and your children tell a story together!</p>",
             "<p>Tap on \"Setup\", \"Gameplay\", or \"Contest Rules\" to read instructions on how to play this game.</p>",
             "<p>Tap on \"Start Adventure!\" when you and your trainers are ready to begin!</p>",
-            "<img class='home-image' src='/images/pikachu-and-mimikyu.png'>"]
+            "<img class='home-image' src='./images/pikachu-and-mimikyu.png'>"]
     },
     {
         name: "A Note to Parents",
@@ -155,17 +158,47 @@ const locations = [
     {
         name: "Telling Stories with Pokemon Jr.",
         "button text": ["Home", "Table of Contents", "Previous Page", "Start Adventure!"],
-        "button functions": [goHome, goHowTo2, goHowTo6, startAdventure],
+        "button functions": [goHome, goHowTo2, goHowTo6, goEpisode1],
         text: ["<h1>Telling Stories with Pokemon Jr.</h1>",
             "<p>As Narrator, you get to use this Story App to present exciting Pokemon episodes to the Trainers.  Encourage the Trainers to participate and make stuff up.  You follow along, make stuff up too, and have fun!</p>",
             "<p>Each episode is divided into two sections: <b class='ra'>read-alouds</b> and <b class='gp'>gameplay</b>.</p>",
             "<p><b>Read-Alouds</b>  <b class='ra'>This text starts with the Narrator symbol.  Read it out loud to the Trainers.  Pause often to let the Trainers ask questions, provide additional details, and otherwise participate in the storytelling fun.  THere are no right or wrong answers to these questions.  Instead, they help the Trainers imagine the Pokemon world and add to the story.</b></p>",
             "<p><b>Gameplay</b>  <b class='gp'>This text is colored so that you know it is different from the read-aloud text.  Don't read this text out loud.  Instead, follow the gameplay advice it provides.  It tells you when to run Pokemon Contests and describes other game-related events.</b></p>",
-            "<p>This symbol <img class='stop' src='/images/stop.webp'> means you've reached the end of an episode.</p>",
+            "<p>This symbol <img class='stop' src='./images/stop.webp'> means you've reached the end of an episode.</p>",
             "<p>Whenever you and the Trainers are ready, tap on \"Start Adventure!\" to start playing!</p>"]
     }
 ];
 //-------------------------EPISODES-------------------------
+const episodes = [
+    {
+        name: "1",
+        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goHome, openDice, openCoin,""],
+        text: ["<h1>Episode 1: I Choose You!</h1>",
+            "<p><b class='ra'>You and your friends are all Pokemon Trainers.  You want to become the best Pokemon Masters in the world!  But first you need a Pokemon.</b></p>",
+            "<p><b class='ra'>You go to Professor Oak's lab to choose your starting Pokemon.</b></p>",
+            "<p><b class='ra'>The lab is part of a larger building.  What does the lab look like?</b></p>",
+            "<p><b class='ra'>There are computers and machines in the lab.  What else do you see?</b></p>",
+            "<p><b class='gp'>While the Trainers are describing Professor Oak's lab, plcae the following Power Cards where all the Trainers can see them: Bulbasaur, Charmander, Pikachu, Squirtle, Bulbasaur, and Pikachu. (There are two Bulbasaur and two Pikachu cards, so two different Trainers can select a Bulbasaur or a Pikachu.)</b></p>",
+            "<p><b class='ra'>\"Hello, my friends,\" Professor Oak says.  \"You may each select one Pokemon from among those you see here.  Choose wisely, for a Trainer's first Pokemon is very special.\"</b></p>",
+            "<p><b class='gp'>The Trainer to the left of the Narrator selects first, then the Trainer to the left of the first Trainer, and so on until all of the Trainers have picked one Power Card.</b></p>",
+            "<p><b class='gp'>Give each Trainer the Power Card he or she selected.  This is the Trainer's first Pokemon!</b></p>"
+        ]
+    }
+];
+//-------------------------ACTIONS-------------------------
+const actions = [
+    {
+        name: "Roll Dice",
+        "button text": ["Roll!", "Close"],
+        "button functions": [diceRoll, closeActionScreen],
+    },
+    {
+        name: "Flip Coin",
+        "button text": ["Flip Coin!", "Close"],
+        "button functions": [flipCoin, closeActionScreen],
+    }
+];
 
 
 //---------------------
@@ -174,7 +207,9 @@ const locations = [
 button1.onclick = goHowTo1;
 button2.onclick = goHowTo1;
 button3.onclick = pickChapter;
-button4.onclick = startAdventure;
+button4.onclick = goEpisode1;
+action_button1.onclick = diceRoll;
+action_button2.onclick = closeActions;
 
 
 //---------------------
@@ -193,52 +228,94 @@ function update(location){
     button4.onclick = location["button functions"][3];
 };
 
+function updateActions(action){
+    action_button1.innerText = action["button text"][0];
+    action_button2.innerText = action["button text"][1];
+    action_button1.onclick = action["button functions"][0];
+    action_button2.onclick = action["button functions"][1];
+};
+
 
 //---------------------
 //-----GAMEPLAY FUNCTIONS
 //---------------------
+//---------------ACTIONS------------------
+function openActionScreen(){
+    actionScreen.classList.remove("fade-out");
+    actionScreen.classList.add("fade-in");
+    actionScreen.style.display = "flex";
+};
+function closeActionScreen(){
+    actionScreen.classList.remove("fade-in");
+    actionScreen.classList.add("fade-out");
+    actionScreen.style.display = "none";
+    action.innerText = "";
+};
+function openDice(){
+    updateActions(actions[0]);
+    openActionScreen();
+};
+function openCoin(){
+    updateActions(actions[1]);
+    openActionScreen();
+};
+function diceRoll(){
+    let dice = Math.floor(Math.random() * 6) +1;
+    action.innerText = dice;
+};
+function flipCoin(){
+    let coin = ["Heads", "Tails"];
+    let flip = Math.floor(Math.random() * coin.length);
+    action.innerText = coin[flip];
+};
 
 //---------------HOME-------------------
 function goHome(){
     currentLocation = "Home";
     update(locations[0]);
-}
+};
 function goHowTo1(){ //a note to parents
     update(locations[1]);
 };
 
 function goHowTo2(){ //table of contents
     update(locations[2]);
-}
+};
 
 function goHowTo3(){ //object
     update(locations[3]);
-}
+};
 
 function goHowTo4(){ //setup
     update(locations[4]);
-}
+};
 
 function goHowTo5(){ //gameplay
     update(locations[5]);
-}
+};
 
 function goHowTo6(){ //pokemon contest rules
     update(locations[6]);
-}
+};
 
 function goHowTo7(){ //pokemon contest example
     update(locations[7]);
-}
+};
 
 function goHowTo8(){ //telling stories with pokemon
     update(locations[8]);
-}
+};
 
 function pickChapter(){
     update(locations[9]);
-}
+};
 
 function startAdventure(){
     update(locations[10]);
-}
+};
+
+//---------------EPISODES-------------------
+function goEpisode1(){
+    currentLocation = "Professor Oak's Lab";
+    update(episodes[0]);
+};
