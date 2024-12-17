@@ -55,14 +55,14 @@ const locations = [
         name: "Table of Contents",
         "button text": ["Home", "", "Previous Page", "Next Page"],
         "button functions": [goHome, "", goHowTo1, goHowTo3],
-        text: ["<h1>Table of Contents</h1>",
+        text: ["<center><h1>Table of Contents</h1>",
             "<p><a onclick=\"goHowTo3()\">Object</a></p>",
             "<p><a onclick=\"goHowTo4()\">Setup</a></p>",
             "<p><a onclick=\"goHowTo5()\">Gameplay</a></p>",
             "<p><a onclick=\"goHowTo6()\">Pokemon Contest Rules</a></p>",
             "<p><a onclick=\"goHowTo7()\">Pokemon Contest Example</a></p>",
             "<p><a onclick=\"goHowTo8()\">Telling Stories with Pokemon</a></p>",
-            "<p><a onclick=\"pickChapter()\">Pick a Chapter</a></p>"]
+            "<p><a onclick=\"pickChapter()\">Pick a Chapter</a></p></center>"]
     },
     {
         name: "Object",
