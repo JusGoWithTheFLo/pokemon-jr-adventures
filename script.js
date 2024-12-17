@@ -77,8 +77,8 @@ const locations = [
         "button functions": [goHome, goHowTo2, goHowTo3, goHowTo5],
         text: ["<h1>Setup</h1>",
             "<p>The <b>Narrator</b> keeps this Story App and follows the directions for the episode being played.</p>",
-            "<p><b>If this is your first game</b>... you're about to play <b>Episode 1: I Choose You!</b> </p>",
-            "<p><b>If you've already played Episode One</b>... </p>"]
+            "<p><b>If this is your first game</b>... you're about to play <b>Episode 1: I Choose You!</b>  Find the following six Power Cards and place them where all the Trainers can see them: Bulbasaur, Charmander, Pikachu, and Squirtle. (There are two Bulbasaur and two Pikachu cards.)</p>",
+            "<p><b>If you've already played Episode One</b>...  give each Trainer the Power Cards that match the Pokemon they've checked on their Checklists.  These are the Pokemon a Trainer has caught and added to his or her <b>team</b>.</p>"]
     },
     {
         name: "Gameplay",
@@ -89,6 +89,8 @@ const locations = [
             "<p>The Trainer to the left of the Narrator always acts first, followed by the other Trainers in order, left to right.</p>",
             "<p>When it's time for a Contest, refer to the Pokemon Contest rules described on the following page.</p>",
             "<p>An episode ends when the Trainers have overcome the obstacle or otherwise achieved the goal of the episode, or when all of the Pokemon on each Trainer's team have fainted.</p>",
+            "<h2>Pokemon Power Cards</h2>",
+            "<img class='home-image' src='./images/power-cards.png'>",
             "<h2>Pokemon Checklists</h2>",
             "<p>Each Trainer gets a <b>Pokemon Checklist</b> in Episode 2.  Whenever a Trainer catches a Pokemon, he or shee checks the box next to its name.  The checked boxes show which Pokemon are on a Trainer's team.  Whenever you start a new episode, give each Trainer the Power Cards that correspond to the boxes checked on his or her Checklists.</p>"]
     },

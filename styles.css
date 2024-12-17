@@ -103,7 +103,7 @@ b.gp{
 
 /*-----IMAGES-----*/
 .home-image{
-    border-radius: 40%;
+    border-radius: 10%;
     display: block;
     width: 90vw;
     max-width: 500px;
