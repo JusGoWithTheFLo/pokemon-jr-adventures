@@ -22,8 +22,10 @@ body{
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    min-height: 90dvh;
+    justify-content: top;
     margin: auto;
+    margin-bottom: 100px;
     padding: 20px;
     width: 90%;
 }
@@ -40,7 +42,6 @@ body{
 
 #text{
     color: white;
-    margin-bottom: 100px;
 }
 
 #text a,
