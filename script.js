@@ -4,6 +4,8 @@
 let money = 50;
 let contest;
 let currentLocation = "Home";
+let currentEpisode = "Home";
+let lastEpisode = 0;
 
 //---------------------
 //-----HTML SELECTORS
@@ -38,7 +40,7 @@ const locations = [
         text: ["<p>Welcome to Pokemon Jr Adventures FLO.EX, a game where you and your children tell a story together!</p>",
             "<p>Tap on \"Setup\", \"Gameplay\", or \"Contest Rules\" to read instructions on how to play this game.</p>",
             "<p>Tap on \"Start Adventure!\" when you and your trainers are ready to begin!</p>",
-            "<img class='home-image' src='./images/pikachu-and-mimikyu.png'>"]
+            "<img class='large-image' src='./images/pikachu-and-mimikyu.png'>"]
     },
     {
         name: "A Note to Parents",
@@ -56,13 +58,13 @@ const locations = [
         "button text": ["Home", "", "Previous Page", "Next Page"],
         "button functions": [goHome, "", goHowTo1, goHowTo3],
         text: ["<center><h1>Table of Contents</h1>",
-            "<p><a onclick=\"goHowTo3()\">Object</a></p>",
-            "<p><a onclick=\"goHowTo4()\">Setup</a></p>",
-            "<p><a onclick=\"goHowTo5()\">Gameplay</a></p>",
-            "<p><a onclick=\"goHowTo6()\">Pokemon Contest Rules</a></p>",
-            "<p><a onclick=\"goHowTo7()\">Pokemon Contest Example</a></p>",
-            "<p><a onclick=\"goHowTo8()\">Telling Stories with Pokemon</a></p>",
-            "<p><a onclick=\"pickChapter()\">Pick a Chapter</a></p></center>"]
+            "<p><a onclick='goHowTo3()'>Object</a></p>",
+            "<p><a onclick='goHowTo4()'>Setup</a></p>",
+            "<p><a onclick='goHowTo5()'>Gameplay</a></p>",
+            "<p><a onclick='goHowTo6()'>Pokemon Contest Rules</a></p>",
+            "<p><a onclick='goHowTo7()'>Pokemon Contest Example</a></p>",
+            "<p><a onclick='goHowTo8()'>Telling Stories with Pokemon</a></p>",
+            "<p><a onclick='pickChapter()'>Pick a Chapter</a></p></center>"]
     },
     {
         name: "Object",
@@ -90,7 +92,7 @@ const locations = [
             "<p>When it's time for a Contest, refer to the Pokemon Contest rules described on the following page.</p>",
             "<p>An episode ends when the Trainers have overcome the obstacle or otherwise achieved the goal of the episode, or when all of the Pokemon on each Trainer's team have fainted.</p>",
             "<h2>Pokemon Power Cards</h2>",
-            "<img class='home-image' src='./images/power-cards.png'>",
+            "<img class='large-image' src='./images/power-cards.png'>",
             "<h2>Pokemon Checklists</h2>",
             "<p>Each Trainer gets a <b>Pokemon Checklist</b> in Episode 2.  Whenever a Trainer catches a Pokemon, he or shee checks the box next to its name.  The checked boxes show which Pokemon are on a Trainer's team.  Whenever you start a new episode, give each Trainer the Power Cards that correspond to the boxes checked on his or her Checklists.</p>"]
     },
@@ -168,14 +170,37 @@ const locations = [
             "<p><b>Gameplay</b>  <b class='gp'>This text is colored so that you know it is different from the read-aloud text.  Don't read this text out loud.  Instead, follow the gameplay advice it provides.  It tells you when to run Pokemon Contests and describes other game-related events.</b></p>",
             "<p>This symbol <img class='stop' src='./images/stop.webp'> means you've reached the end of an episode.</p>",
             "<p>Whenever you and the Trainers are ready, tap on \"Start Adventure!\" to start playing!</p>"]
+    },
+    {
+        name: "Pick A Chapter",
+        "button text": ["Home", "Table of Contents", "",""],
+        "button functions": [goHome, goHowTo2, "",""],
+        text: ["<h1>Pick a Chapter</h1>",
+            "<p><a onclick='goEpisode1()'>Episode 1: I Choose You!</a></p>",
+            "<p><a onclick=''>Episode 2: Gotta Catch 'Em!</a></p>",
+            "<p><a onclick=''>Episode 3: Spearow Trouble!</a></p>",
+            "<p><a onclick=''>Episode 4: Viridian Forest</a></p>",
+            "<p><a onclick=''>Episode 5: The Broken Bridge!</a></p>",
+            "<p><a onclick=''>Episode 6: Mean Pidgey</a></p>",
+            "<p><a onclick=''>Episode 7: Spearow Fury!</a></p>",
+            "<p><a onclick=''>Episode 8: Pokemon Emergency!</a></p>",
+            "<p><a onclick=''>Episode 9: Pokemon Hunting!</a></p>",
+            "<p><a onclick=''>Episode 10: Camp Out!</a></p>",
+            "<p><a onclick=''>Episode 11: Gary's Challenge!</a></p>",
+            "<p><a onclick=''>Episode 12: Ambushed!</a></p>",
+            "<p><a onclick=''>Episode 13: Pokemon Galore!</a></p>",
+            "<p><a onclick=''>Episode 14: Samurai's Challenge!</a></p>",
+            "<p><a onclick=''>Episode 15: Pewter City Contest!</a></p>",
+            "<p><a onclick=''>Episode 16: Fire!</a></p>",
+        ]
     }
 ];
 //-------------------------EPISODES-------------------------
 const episodes = [
     {
-        name: "1",
+        episode: 1,
         "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin,""],
+        "button functions": [goHome, openDice, openCoin, goEpisode2],
         text: ["<h1>Episode 1: I Choose You!</h1>",
             "<p><b class='ra'>You and your friends are all Pokemon Trainers.  You want to become the best Pokemon Masters in the world!  But first you need a Pokemon.</b></p>",
             "<p><b class='ra'>You go to Professor Oak's lab to choose your starting Pokemon.</b></p>",
@@ -184,10 +209,66 @@ const episodes = [
             "<p><b class='gp'>While the Trainers are describing Professor Oak's lab, plcae the following Power Cards where all the Trainers can see them: Bulbasaur, Charmander, Pikachu, Squirtle, Bulbasaur, and Pikachu. (There are two Bulbasaur and two Pikachu cards, so two different Trainers can select a Bulbasaur or a Pikachu.)</b></p>",
             "<p><b class='ra'>\"Hello, my friends,\" Professor Oak says.  \"You may each select one Pokemon from among those you see here.  Choose wisely, for a Trainer's first Pokemon is very special.\"</b></p>",
             "<p><b class='gp'>The Trainer to the left of the Narrator selects first, then the Trainer to the left of the first Trainer, and so on until all of the Trainers have picked one Power Card.</b></p>",
-            "<p><b class='gp'>Give each Trainer the Power Card he or she selected.  This is the Trainer's first Pokemon!</b></p>"
+            "<p><b class='gp'>Give each Trainer the Power Card he or she selected.  This is the Trainer's first Pokemon!</b></p>",
+            "<p><b class='ra'>\"What good selections you have made,\" says Professor Oak.  \"Before I send you out into the world, let's have a practice Pokemon Contest.  Good luck, Trainers!\"</b></p>",
+            "<p><b class='gp'>Pair the Trainers off against one another to play through this Pokemon Contest.  If there is an odd number of Trainers, you play Professor Oak.  THe Professor uses one of the remaining Pokemon Power Cards to face off against the Trainer who doesn't have an opponent.</b></p>",
+            "<p><a onclick='goHowTo6()'><b class='ra'><u>Click here for Pokemon Contest rules.</u></b></a></p>",
+            "<p><b class='gp'>Let each pair of Trainers battle until one of their Pokemon faints.  The Trainer whose Pokemon didn't faint is the winner of the training Contest.  If both Pokemon faint in the same round, the Contest ends in a tie.</b></p>",
+            "<p><b class='ra'>\"Very good, Trainers,\" says Professor Oak.  Let's take your Pokemon next door to the Pokemon Center.  The nurses there will revive your fainted Pokemon.\"</b></p>",
+            "<p><b class='ra'>The Pokemon Center is like a hospital for Pokemon.  How does the Pokemon Center revive Pokemon who are hurt or have fainted?</b></p>",
+            "<p><b class='gp'>Pause to let the Trainers answer.</b></p>",
+            "<p><b class='ra'>What do you do at the end of your first day as Pokemon Trainers?</b></p>",
+            "<p><b class='gp'>Pause and let the Trainers answer.</b></p>",
+            "<img class='stop' src='./images/stop.webp'>",
         ]
-    }
-];
+    },
+    {
+        episode: 2,
+        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goHome, openDice, openCoin, goEpisode3],
+        text: ["<h1>Episode 2: Gotta Catch 'Em!</h1>",
+            "<p><b class='ra'>The next day, Professor Oak leads you to the edge of Pallet Town.  \"Wild Pokemon live in the fields of long wavy grass outside of town,\" Professor Oak says.  \"I'll watch as you go into the grass and try to catch a Wild Pokemon.  But first, let me give you each a Pokemon Checklist.  Use it to keep track of which Pokemon you have caught.  Good luck, Trainers.\"</b></p>",
+            "<p><b class='gp'>Give each Trainer one Pokemon Checklist.  A Trainer can write his or her name at the top and check off the Pokemon he or she received in Episode 1.</b></p>",
+            "<img class='large-image' src='./images/grass-field.png'>",
+            "<h2><b class='gp'>Pokemon Contest: Wild Battle!</p></h2>",
+            "<p><b class='ra'>You walk into the long grass, trying to spot a Wild Pokemon.  The grass tickles your legs and it's hard to see very far, but you can hear things moving nearby.  Then you see it - A Wild Pokemon!</b></p>",
+            "<p><b class='ra'>Will you send your Pokemon out to battle it?</b></p>",
+            "<p><b class='gp'>To capture a Wild Pokemon, a Trainer must beat it in a Pokemon Contest.  There are as many Wild Pokemon as there are Trainers.  Let each Trainer pick a Power Card at random from the Power Deck.  That's the Wild Pokemon that Trainer is trying to capture.  Use the Wild Attack listed here instead of the powers listed on the Power Card.</b></p>",
+            "<p><b class='gp'>Let each Trainer complete a Contest before going on to the next.  If the Trainer's Pokemon faints, that Wild Pokemon runs away.  If the Wild Pokemon faints, the Trainer adds that Power Card to his or her team.</b></p>",
+            "<img class='stop' src='./images/stop.webp'>",
+            "<a onclick='goLastEpisode()'>Previous Episode</a>"
+        ]
+    },
+    {
+        episode: "3",
+        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goHome, openDice, openCoin,""],
+        text: ["<h1>Episode 3: Spearow Trouble!</h1>",
+            "<p><b class='ra'>You and your Pokemon are relaxing and having fun at the Pallet Town Pokemon Center.</b></p>",
+            "<p><b class='ra'>What are you doing?</b></p>",
+            "<p><b class='ra'>What are your Pokemon doing?</b></p>",
+            "<p><b class='ra'>Suddenly you hear a scary noise outside.  \"Speeeeeeeearow!\"</b></p>",
+            "<p><b class='ra'>The strange cry fills the air.  The people of Pallet Town run and scren and cry.  A flock of Spearows dive and swoop out of the sky, pecking everyone it sees.</b></p>",
+            "<p><b class='ra'>Does anyone know what a Spearow is?</b></p>",
+            "<p><b class='gp'>A Spearow is a small, nasty bird with a ferocious temper.</b></p>",
+            "<p><b class='ra'>\"You, there!  Pokemon Trainers!\"  Police Officer Jenny calls to you.  \"The town needs your help!  Will you send your Pokemon into battle?\"</b></p>",
+            "<p><b class='ra'>Professor Oak appears beside you.  \"You can only use one Pokemon at a time in battle.  Which Pokemon will you choose?\"</b></p>",
+            "<img class='large-image' src='./images/spearow-trouble.png'>",
+            "<h2><b class='gp'>Pokemon Contest: Out of The Sky!</p></h2>",
+            "<p><b class='gp'>To drive off the Spearow flock, the Trainers must hurt it for a total of 15 Hits.  When the flock receives 15 Hit Tokens, it flies away.  (The Trainers can't capture any of the Spearows.)</b></p>",
+            "<p><b class='gp'>The Spearow flock attacks once each round.  If its attack is successful, ALL of the Pokemon fighting it receive 3 Hit Tokens.</b></p>",
+            "<img class='large-image' src='./images/officer-jenny.png'>",
+            "<p><b class='ra'>After the Spearow flock has been chased away, Police Officer Jenny walks toward you.  She smiles.  \"Thanks for helping out,\" she says.</b></p>",
+            "<p><b class='ra'>What do you say to her?</b></p>",
+            "<p><b class='ra'>\"While your Pokemon are being treated at the Pokemon Center after that great battle, I wanted to tell you to be on the look-out for Pokemon thieves,\" Officer Jenny says.  \"Be careful, and take good care of your Pokemon.  They're heroes here in Pallet Town!\"</b></p>",
+            "<p><b class='ra'>A little while later, Professor Oak steps out of the Pokemon Center.  Your Pokemon follow him out, looking clean and refreshed.  \"Good work, Trainers,\" Professor Oak says.  \"I'm proud of you all.\"</b></p>",
+            "<p><b class='ra'>What do you say to Professor Oak?</b></p>",
+            "<p><b class='ra'>\"Now it's time for you to head out on your own and begin your journey,\" the Professor says.  \"I'm sure you are all going to become Pokemon Masters some day.  Good luck!\"</b></p>",
+            "<img class='stop' src='./images/stop.webp'><br>",
+            "<a onclick='goLastEpisode()'>Previous Episode</a>"
+        ]
+    },
+];//"<p><b class='gp'></b></p>",
 //-------------------------ACTIONS-------------------------
 const actions = [
     {
@@ -317,7 +398,23 @@ function startAdventure(){
 };
 
 //---------------EPISODES-------------------
+function goLastEpisode(){
+    update(episodes[lastEpisode]);
+}
+
 function goEpisode1(){
     currentLocation = "Professor Oak's Lab";
     update(episodes[0]);
+};
+
+function goEpisode2(){
+    currentLocation = "Pallet Town";
+    update(episodes[1]);
+    lastEpisode = 1;
+};
+
+function goEpisode3(){
+    currentLocation = "Pallet Town";
+    update(episodes[2]);
+    lastEpisode = 2;
 };
