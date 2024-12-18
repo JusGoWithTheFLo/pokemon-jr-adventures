@@ -35,8 +35,8 @@ const locations = [
     //--------------------------------------------------
     {
         name: "Home",
-        "button text": ["Instructions", "", "Pick Chapter", "Start Adventure!"],
-        "button functions": [goHowTo1, "", pickChapter, goEpisode1],
+        "button text": ["Instructions", "", "Pick Episode", "Start Adventure!"],
+        "button functions": [goHowTo1, "", selectEpisode, goEpisode1],
         text: ["<p>Welcome to Pokemon Jr Adventures FLO.EX, a game where you and your children tell a story together!</p>",
             "<p>Tap on \"Setup\", \"Gameplay\", or \"Contest Rules\" to read instructions on how to play this game.</p>",
             "<p>Tap on \"Start Adventure!\" when you and your trainers are ready to begin!</p>",
@@ -54,7 +54,7 @@ const locations = [
             "<p><a onclick='goHowTo6()'>Pokemon Contest Rules</a></p>",
             "<p><a onclick='goHowTo7()'>Pokemon Contest Example</a></p>",
             "<p><a onclick='goHowTo8()'>Telling Stories with Pokemon</a></p>",
-            "<p><a onclick='pickChapter()'>Pick a Chapter</a></p></center>"]
+            "<p><a onclick='selectEpisode()'>Select an Episode</a></p></center>"]
     },
     {
         name: "A Note to Parents",
@@ -132,7 +132,7 @@ const locations = [
             "<p>The Pokemon in play has not yet fainted;</p>",
             "<p>The Pokemon being brought into play has not yet fainted;</p>",
             "<p>The switch must take place at the beginning of the round.</p>",
-            "<h2>Faintaing</h2>",
+            "<h2>Fainting</h2>",
             "<p>When a Pokemon gets hit during a Contest, it receives Hit Tokens.  The Pokemon <b>faints</b> when the number of Hit Tokens it receives equals or exceeds the Pokemon's Hit Point total.</p>",
             "<p>When a Pokemon faints, <b>return</b> all of its Hit Tokens to the Hit Token pile.</p>",
             "<p>A Trainer loses a Contest if his or her Pokemon faints.</p>",
@@ -169,8 +169,10 @@ const locations = [
             "<p>Each episode is divided into two sections: <b class='ra'>read-alouds</b> and <b class='gp'>gameplay</b>.</p>",
             "<p><b>Read-Alouds</b>  <b class='ra'>This text starts with the Narrator symbol.  Read it out loud to the Trainers.  Pause often to let the Trainers ask questions, provide additional details, and otherwise participate in the storytelling fun.  THere are no right or wrong answers to these questions.  Instead, they help the Trainers imagine the Pokemon world and add to the story.</b></p>",
             "<p><b>Gameplay</b>  <b class='gp'>This text is colored so that you know it is different from the read-aloud text.  Don't read this text out loud.  Instead, follow the gameplay advice it provides.  It tells you when to run Pokemon Contests and describes other game-related events.</b></p>",
-            "<p>This symbol <img class='stop' src='./images/stop.webp'> means you've reached the end of an episode.</p>",
-            "<p>Whenever you and the Trainers are ready, tap on \"Start Adventure!\" to start playing!</p>"]
+            "<p>This symbol <img class='stop' src='./images/stop.webp'> means you've reached the end of an episode.  Beneath this image will be an option to return to the previous episode.</p>",
+            "<p>Whenever you and the Trainers are ready, tap on \"Start Adventure!\" to start playing!</p>",
+            "<p>If you're continuing a story, you may also continue it by selecting an episode: <a onclick='selectEpisode()'>Select An Episode</a></p>"
+        ]
     },
     {
         name: "Pick A Chapter",
@@ -290,7 +292,7 @@ const actions = [
 //---------------------
 button1.onclick = goHowTo1;
 button2.onclick = goHowTo1;
-button3.onclick = pickChapter;
+button3.onclick = selectEpisode;
 button4.onclick = goEpisode1;
 action_button1.onclick = diceRoll;
 action_button2.onclick = closeActions;
@@ -392,7 +394,7 @@ function goHowTo8(){ //telling stories with pokemon
     update(locations[8]);
 };
 
-function pickChapter(){
+function selectEpisode(){
     update(locations[9]);
 };
 
