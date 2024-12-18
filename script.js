@@ -309,6 +309,8 @@ function update(location){
     button2.onclick = location["button functions"][1];
     button3.onclick = location["button functions"][2];
     button4.onclick = location["button functions"][3];
+    document.body.scrollTop = 0; //for safari
+    document.documentElement.scrollTop = 0; //for chrome
 };
 
 function updateActions(action){
@@ -400,6 +402,7 @@ function startAdventure(){
 //---------------EPISODES-------------------
 function goLastEpisode(){
     update(episodes[lastEpisode]);
+    lastEpisode --;
 }
 
 function goEpisode1(){
@@ -410,11 +413,11 @@ function goEpisode1(){
 function goEpisode2(){
     currentLocation = "Pallet Town";
     update(episodes[1]);
-    lastEpisode = 1;
+    lastEpisode = 0;
 };
 
 function goEpisode3(){
     currentLocation = "Pallet Town";
     update(episodes[2]);
-    lastEpisode = 2;
+    lastEpisode = 1;
 };
