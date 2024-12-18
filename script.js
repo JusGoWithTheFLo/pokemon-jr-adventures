@@ -70,14 +70,14 @@ const locations = [
     {
         name: "Object",
         "button text": ["Home", "Table of Contents", "Previous Page", "Next Page"],
-        "button functions": [goHome, goHowTo2, goHowTo2, goHowTo4],
+        "button functions": [goHome, goHowTo1, goHowTo2, goHowTo4],
         text: ["<h1>Object</h1>",
             "<p>Kids play <b>Pokemon Trainers</b>, trying to catch Pokemon and solve problems presented in each episode.  A parent or other adult is the <b>Narrator</b> for each episode, using this Story App as a guide.</p>"]
     },
     {
         name: "Setup",
         "button text": ["Home", "Table of Contents", "Previous Page", "Next Page"],
-        "button functions": [goHome, goHowTo2, goHowTo3, goHowTo5],
+        "button functions": [goHome, goHowTo1, goHowTo3, goHowTo5],
         text: ["<h1>Setup</h1>",
             "<p>The <b>Narrator</b> keeps this Story App and follows the directions for the episode being played.</p>",
             "<p><b>If this is your first game</b>... you're about to play <b>Episode 1: I Choose You!</b>  Find the following six Power Cards and place them where all the Trainers can see them: Bulbasaur, Charmander, Pikachu, and Squirtle. (There are two Bulbasaur and two Pikachu cards.)</p>",
@@ -86,7 +86,7 @@ const locations = [
     {
         name: "Gameplay",
         "button text": ["Home", "Table of Contents", "Previous Page", "Next Page"],
-        "button functions": [goHome, goHowTo2, goHowTo4, goHowTo6],
+        "button functions": [goHome, goHowTo1, goHowTo4, goHowTo6],
         text: ["<h1>Gameplay</h1>",
             "<p>You're the <b>Narrator</b>.  You select an episode from the Story App and follow the directions.  You read part of a story to the Trainers.  The Trainers add details to the story by answering questions, describing actions, and selecting Pokemon from their teams to participate in <b>Pokemon Contests</b>.</p>",
             "<p>The Trainer to the left of the Narrator always acts first, followed by the other Trainers in order, left to right.</p>",
@@ -100,7 +100,7 @@ const locations = [
     {
         name: "Pokemon Contest Rules",
         "button text": ["Home", "Table of Contents", "Previous Page", "Next Page"],
-        "button functions": [goHome, goHowTo2, goHowTo5, goHowTo7],
+        "button functions": [goHome, goHowTo1, goHowTo5, goHowTo7],
         text: ["<h1>Gameplay</h1>",
             "<p>Pokemon are good at all sorts of things.  They have special powers that let them fight and help their Trainers solve problems as they occur in episodes.</p>",
             "<p>Whenever a Pokemon uses its special powers, you run a <b>Pokemon Contest</b>.  A Contest helps determine the winner of a challenge, or is used to see if a Pokemon accomplishes some other kind of task.  (You'll see examples of this in the story episodes.)</p>",
@@ -144,7 +144,7 @@ const locations = [
     {
         name: "Pokemon Contest Example",
         "button text": ["Home", "Table of Contents", "Previous Page", "Next Page"],
-        "button functions": [goHome, goHowTo2, goHowTo6, goHowTo8],
+        "button functions": [goHome, goHowTo1, goHowTo6, goHowTo8],
         text: ["<h1>Pokemon Contest Example</h1>",
             "<p>Ash and Misty decide to have a practice Contest.  Ash selects <b>Bulbasaur</b> (with 9 Hit Points) from his team.  Misty chooses <b>Poliwag</b> (who has 8 Hit Points).</p>",
             "<p>Ash decides to use <b>Tackle</b> to start, so he places the Power Card with the Tackle power face up.  Misty wants to use <b>Bubble</b>, so she places that power face up.</p>",
@@ -163,7 +163,7 @@ const locations = [
     {
         name: "Telling Stories with Pokemon Jr.",
         "button text": ["Home", "Table of Contents", "Previous Page", "Start Adventure!"],
-        "button functions": [goHome, goHowTo2, goHowTo6, goEpisode1],
+        "button functions": [goHome, goHowTo1, goHowTo6, goEpisode1],
         text: ["<h1>Telling Stories with Pokemon Jr.</h1>",
             "<p>As Narrator, you get to use this Story App to present exciting Pokemon episodes to the Trainers.  Encourage the Trainers to participate and make stuff up.  You follow along, make stuff up too, and have fun!</p>",
             "<p>Each episode is divided into two sections: <b class='ra'>read-alouds</b> and <b class='gp'>gameplay</b>.</p>",
@@ -177,29 +177,31 @@ const locations = [
     {
         name: "Pick A Chapter",
         "button text": ["Home", "Table of Contents", "",""],
-        "button functions": [goHome, goHowTo2, "",""],
+        "button functions": [goHome, goHowTo1, "",""],
         text: ["<h1>Pick a Chapter</h1>",
             "<p><a onclick='goEpisode1()'>Episode 1: I Choose You!</a></p>",
-            "<p><a onclick=''>Episode 2: Gotta Catch 'Em!</a></p>",
-            "<p><a onclick=''>Episode 3: Spearow Trouble!</a></p>",
-            "<p><a onclick=''>Episode 4: Viridian Forest</a></p>",
-            "<p><a onclick=''>Episode 5: The Broken Bridge!</a></p>",
-            "<p><a onclick=''>Episode 6: Mean Pidgey</a></p>",
-            "<p><a onclick=''>Episode 7: Spearow Fury!</a></p>",
-            "<p><a onclick=''>Episode 8: Pokemon Emergency!</a></p>",
-            "<p><a onclick=''>Episode 9: Pokemon Hunting!</a></p>",
-            "<p><a onclick=''>Episode 10: Camp Out!</a></p>",
-            "<p><a onclick=''>Episode 11: Gary's Challenge!</a></p>",
-            "<p><a onclick=''>Episode 12: Ambushed!</a></p>",
-            "<p><a onclick=''>Episode 13: Pokemon Galore!</a></p>",
-            "<p><a onclick=''>Episode 14: Samurai's Challenge!</a></p>",
-            "<p><a onclick=''>Episode 15: Pewter City Contest!</a></p>",
-            "<p><a onclick=''>Episode 16: Fire!</a></p>",
+            "<p><a onclick='goEpisode2()'>Episode 2: Gotta Catch 'Em!</a></p>",
+            "<p><a onclick='goEpisode3()'>Episode 3: Spearow Trouble!</a></p>",
+            "<p><a onclick='goEpisode4()'>Episode 4: Viridian Forest</a></p>",
+            "<p><a onclick='goEpisode5()'>Episode 5: The Broken Bridge!</a></p>",
+            "<p><a onclick='goEpisode6()'>Episode 6: Mean Pidgey</a></p>",
+            "<p><a onclick='goEpisode7()'>Episode 7: Spearow Fury!</a></p>",
+            "<p><a onclick='goEpisode8()'>Episode 8: Pokemon Emergency!</a></p>",
+            "<p><a onclick='goEpisode9()'>Episode 9: Pokemon Hunting!</a></p>",
+            "<p><a onclick='goEpisode10()'>Episode 10: Camp Out!</a></p>",
+            "<p><a onclick='goEpisode11()'>Episode 11: Gary's Challenge!</a></p>",
+            "<p><a onclick='goEpisode12()'>Episode 12: Ambushed!</a></p>",
+            "<p><a onclick='goEpisode13()'>Episode 13: Pokemon Galore!</a></p>",
+            "<p><a onclick='goEpisode14()'>Episode 14: Samurai's Challenge!</a></p>",
+            "<p><a onclick='goEpisode15()'>Episode 15: Pewter City Contest!</a></p>",
+            "<p><a onclick='goEpisode16()'>Episode 16: Fire!</a></p>",
+            "<br><br><br><br><br>", //spaces so that the last episode(s) don't get covered by the control bar
         ]
     }
 ];
 //-------------------------EPISODES-------------------------
 const episodes = [
+    {},
     {
         episode: 1,
         "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
@@ -245,7 +247,7 @@ const episodes = [
     {
         episode: "3",
         "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin,""],
+        "button functions": [goHome, openDice, openCoin, goEpisode4],
         text: ["<h1>Episode 3: Spearow Trouble!</h1>",
             "<p><b class='ra'>You and your Pokemon are relaxing and having fun at the Pallet Town Pokemon Center.</b></p>",
             "<p><b class='ra'>What are you doing?</b></p>",
@@ -267,6 +269,152 @@ const episodes = [
             "<p><b class='ra'>A little while later, Professor Oak steps out of the Pokemon Center.  Your Pokemon follow him out, looking clean and refreshed.  \"Good work, Trainers,\" Professor Oak says.  \"I'm proud of you all.\"</b></p>",
             "<p><b class='ra'>What do you say to Professor Oak?</b></p>",
             "<p><b class='ra'>\"Now it's time for you to head out on your own and begin your journey,\" the Professor says.  \"I'm sure you are all going to become Pokemon Masters some day.  Good luck!\"</b></p>",
+            "<center><img class='stop' src='./images/stop.webp'><br>",
+            "<a onclick='goLastEpisode()'>Previous Episode</a></center>"
+        ]
+    },
+    {
+        episode: "4",
+        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goHome, openDice, openCoin, goEpisode5],
+        text: ["<h1>Episode 4: Viridian Forest</h1>",
+            "<p><b class='ra'>Professor Oak points down the road.  \"That way leads to Viridian Forest,\" he says.  \"That's where you should begin your journey.  Good-bye!\"</b></p>",
+            "<p><b class='ra'>What do you say to Professor Oak?</b></p>",
+            "<p><b class='ra'>Then what do you do?</b></p>",
+            "<p><b class='gp'>When the Trainers say they are heading for Viridian Forest, ask them what's around them.  Remember, there are no right or wrong answers.  Praise all efforts and encourage participation and imagination.</b></p>",
+            "<p><b class='ra'>What do you see and hear in the Forest?</b></p>",
+            "<p><b class='ra'>What kinds of animals live in the Forest?</b></p>",
+            "<p><b class='ra'>Is it scary in the Forest?  Are your Pokemon afraid?</b></p>",
+            "<img class='large-image' src='./images/forest-day.png'>",
+            "<p><b class='ra'>As you travel through Viridian Forest, the sky gets dark and it starts to rain.</b></p>",
+            "<p><b class='ra'>How does the rain feel?  Is it warm or cold?</b></p>",
+            "<p><b class='ra'>What do you do while it's raining?</b></p>",
+            "<p><b class='gp'>The Trainers can find a place to wait out the storm, or they can continue to walk through the forest.  At some point, they notice a few Wild Pokemon hiding nearby under some leaves.</b></p>",
+            "<img class='large-image' src='./images/rain-pokemon.png'>",
+            "<p><b class='ra'>Look!  THere are some Wild Pokemon taking shelter under those leaves.  They don't seem to like the rain.  They don't want to get wet.</b></p>",
+            "<p><b class='gp'>Select a number of Power Cards at random from those remaining in the Power Card deck.  Draw one card for each Trainer plaing this episode.</b></p>",
+            "<p><b class='gp'>These are the Wild Pokemon the Trainers see.</b></p>",
+            "<h2><b class='gp'>Pokemon Contest: Battle in the Rain!</p></h2>",
+            "<p><b class='ra'>Do you want to leave the Wild Pokemon alone?  Or do you want to try to capture them?</b></p>",
+            "<p><b class='gp'>To capture a Wild Pokemon, a Trainer must beat it in a Pokemon Contest.  Let each Trainer pick the Pokemon that he or she wants to try to capture, starting with the Trainer to your left.  Use the Wild Attack listed below instead of the powers listed on the Power Card.</b></p>",
+            "<p><b class='gp'>Let each Trainer complete a Contest before going on to the next.  If the Trainer's Pokemon faints, that Wild Pokemon runs away.  If the Wild Pokemon faints, the Trainer adds that Power Card to his or her team.</b></p>",
+            "<p><b class='gp'>(8 HP) Wild Pokemon - Wild Attack - Roll 5, 6 - 3 Hits</b></p>",
+            "<center><img class='stop' src='./images/stop.webp'><br>",
+            "<a onclick='goLastEpisode()'>Previous Episode</a></center>"
+        ]
+    },
+    {
+        episode: "5",
+        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goHome, openDice, openCoin, goEpisode6],
+        text: ["<h1>Episode 5: The Broken Bridge!</h1>",
+            "<p><b class='ra'>There's a river ahead of you.  A little boy sits at the edge of the river.  He looks very sad.</b></p>",
+            "<p><b class='ra'>What does the little boy look like?</b></p>",
+            "<p><b class='ra'>What do you say to the little boy?</b></p>",
+            "<p><b class='gp'>After everyone has had a chance to add details to the story, the little boy speaks to the Trainers.</b></p>",
+            "<p><b class='ra'>\"Hi,\" the little boy says.  \"The storm knocked out the bridge, and now there's no way to cross the river.\"</b></p>",
+            "<p><b class='ra'>The little boy stands up and points toward a tree near the river's edge.  \"Then we could walk across it.  Too bad I don't have any Pokemon.  They could push that tree down.\"</b></p>",
+            "<p><b class='ra'>He looks back across the river and sighs.  \"That's why I'm going to Viridian City,\" the little boy says.  \"I'm going to become a Pokemon Trainer when I'm old enough.  If I can ever get there!\"</b></p>",
+            "<p><b class='gp'>Let the Trainers talk with the little boy.  His name is Bobby.  Eventually, if the Trainers don't think of it themselves, Bobby asks them to send their Pokemon out to push over the tree and make a bridge.</b></p>",
+            "<p><b class='gp'>The Trainers each send one Pokemon out to help build the bridge.  Each round, a Trainer selects one side of his or her Power Card and rolls the die.</b></p>",
+            "<p><b class='gp'>It takes 15 Hits to push over the tree and form a makeshift bridge.  Once all of the Trainers have worked together to get 15 Hits, the tree is pushed over and stretched across the river.</b></p>",
+            "<p><b class='gp'>With the bridge complete, the Trainers can cross to find their next adventure, and Bobby can continue on his way to Viridian City.</b></p>",
+            "<p><b class='ra'>\"That was so cool!\" Bobby says.  \"I can't wait to become a Pokemon Trainer and collect my own Pokemon team!\"</b></p>",
+            "<p><b class='ra'>He turns to leave.  \"Thanks for helping me,\" Bobby says.  \"Maybe I'll see you at Viridian City.\"</b></p>",
+            "<p><b class='ra'>Bobby crosses the river on the tree-bridge and disappears into the forest.  Now you can cross the river, too.</b></p>",
+            "<center><img class='stop' src='./images/stop.webp'><br>",
+            "<a onclick='goLastEpisode()'>Previous Episode</a></center>"
+        ]
+    },
+    {
+        episode: "6",
+        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goHome, openDice, openCoin, goEpisode7],
+        text: ["<h1>Episode 6: Mean Pidgey</h1>",
+            "<p><b class='ra'>The trip through the foerst has been quiet.  You haven't seen any sign of other people or Pokemon.</b></p>",
+            "<p><b class='ra'>Around the bend, tall grass grows across the path.  In the middle of the tall grass, you see a Pidgey.</b></p>",
+            "<p><b class='ra'>The Pidgey looks mean.  It squawks at you, clawing the ground and pecking in your direction.  What do you want to do?</b></p>",
+            "<img class='large-image' src='./images/pidgey-gust.png'>",
+            "<h2><b class='gp'>Pokemon Contest: Angry Opponent!</p></h2>",
+            "<p><b class='gp'>If any of the Trainers try to walk down the path, the Pidgey pecks at them and refuses to let them pass.</b></p>",
+            "<p><b class='gp'>The only way to get past the Pidgey is to scare it into running away.  To do this, a Trainer's Pokemon must beat it in a Pokemon Contest.  If a Trainer's Pokemon faints, another Trainer must send a Pokemon out to challenge the Pidgey.</b></p>",
+            "<p><b class='gp'>When the Pidgey takes enough Hit Tokens to equal or exceed its Hit Point total, it flies away into the trees.  Then the Trainers can continue on their way.</b></p>",
+            "<p><b class='gp'>(10 HP) Mean Pidgey - Gust Attack - Roll 2, 3, 4, 5, 6 - 3 Hits</b></p>",
+            "<center><img class='stop' src='./images/stop.webp'><br>",
+            "<a onclick='goLastEpisode()'>Previous Episode</a></center>"
+        ]
+    },
+    {
+        episode: "7",
+        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goHome, openDice, openCoin, goEpisode8],
+        text: ["<h1>Episode 7: Spearow Fury!</h1>",
+            "<p><b class='ra'>You hear the sound of battle up ahead.  It sounds like a lot of Pokemon are fighting.  The path curves around a thick clump of trees.  There, in the clearing ahead, a lone Pikachu battles against a flock of Spearows.  It looks like the same flock you fought in Pallet Town!</b></p>",
+            "<p><b class='ra'>The poor Pikachu falls to the forest floor, but the Spearows keep pecking and diving and clawing at the hurt Pokemon.</b></p>",
+            "<p><b class='ra'>What are you going to do?</b></p>",
+            "<img class='large-image' src='./images/pikachu-shocked.png'>",
+            "<p><b class='gp'>The Trainers should decide to help the injured Pikachu.  If they don't want to help, the poor Pikachu calls to them.</b></p>",
+            "<p><b class='ra'>\"Pika?\" the hurt Pikachu calls, obviously asking for your help as another Spearow pecks at him.</b></p>",
+            "<p><b class='gp'>The Trainers must drive off the Spearow flock in order to get close to the injured Pikachu.</b></p>",
+            "<p><b class='gp'>To drive off the Spearow flock, the Trainers must hurt it for a total of 15 Hits.  When the flock receives 15 Hit Tokens, it flies away.</b></p>",
+            "<p><b class='gp'>The Spearow flock attacks once each round.  If its attack is successful, ALL of the Pokemon fighting it receive 4 Hit Tokens.</b></p>",
+            "<h2><b class='gp'>Pokemon Contest: Terrible Wings!</p></h2>",
+            "<p><b class='gp'>After the flock receives 15 Hit Tokens and flies away, the Trainers can approach the hurt Pikachu.</b></p>",
+            "<p><b class='gp'>(15 HP) Spearow Flock - Fury Attack - Roll 5, 6 - 4 Hits</b></p>",
+            "<p><b class='ra'>The Pikachu looks like it has been hurt very badly.  It needs help!  Viridian City is close by.  It has a Pokemon Center.  Will you take Pikachu to Viridian City?</b></p>",
+            "<center><img class='stop' src='./images/stop.webp'><br>",
+            "<a onclick='goLastEpisode()'>Previous Episode</a></center>"
+        ]
+    },
+    {
+        episode: "8",
+        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goHome, openDice, openCoin,""],
+        text: ["<h1>Episode 8: Pokemon Emergency!</h1>",
+            "<p><b class='ra'>You rush the hurt Pikachu into Viridian City.  A police officer stops you.</b></p>",
+            "<p><b class='ra'>\"What's the big hurry?\" Officer Jenny asks.</b></p>",
+            "<p><b class='ra'>What do you say to Police Officer Jenny?</b></p>",
+            "<p><b class='gp'>Give the Trainers a chance to tell Officer Jenny what happened to the poor Pikachu.  Then...</b></p>",
+            "<p><b class='ra'>\"Why didn't you say so?\" asks Officer Jenny.  \"That's a genuine Pokemon emergency!  Follow me.  I'll get you to the Pokemon Center!\"</b></p>",
+            "<p><b class='ra'>The Viridian City Pokemon Center is a lot bigger than the one in Pallet Town.  Officer Jenny leads you inside to the front desk.</b></p>",
+            "<p><b class='ra'>Are there a lot of people in the Pokemon Center?  What are they doing?</b></p>",
+            "<p><b class='ra'>A nurse rushes over to help you.  \"This Pikachu is badly hurt,\" Nurse Joy says.  \"Wait here while we take care of this poor Pokemon.  He'll be better in no time.\"</b></p>",
+            "<p><b class='ra'>What does Nurse Joy do to help the injured Pikachu?  What do you do while you're waiting?</b></p>",
+            "<img class='large-image' src='./images/pikachu-injured.png'>",
+            "<p><b class='gp'>If there is still a Pikachu Power Card remaining in the deck, then one of the Trainers gets to add this Pikachu to his or her team.  To decide who gets to keep this Pikachu, have everyone roll the die.  Pikachu joins the team of the Trainer with the highest roll.</b></p>",
+            "<p><b class='gp'>If both Pikachu cards are already in play, then the Pokemon Center keeps this Pikachu.</b></p>",
+            "<p><b class='ra'>Nurse Joy returns after a while and says, \"That Pikachu was hurt pretty badly.  It's a good thing you got him here as quickly as you did.  He'll be fine now.\"</b></p>",
+            "<p><b class='gp'>Nurse Joy gives the Pikachu to one of the Trainers, if the card is available.  If not, she tells the Trainers that the Pikachu needs to rest here for a few days.</b></p>",
+            "<p><b class='ra'>Suddenly, two Poke Balls crash through the glass roof of the Pokemon Center.  Clouds of thick, green smoke begin to fill the room.</b></p>",
+            "<p><b class='ra'>Two Pokemon emerge from the smoke.  The first floats in the air, and the smoke comes from its own body.</b></p>",
+            "<p><b class='ra'>\"Koffing!\" it says in a deep voice.</b></p>",
+            "<p><b class='ra'>The other is a big purple snake.</b></p>",
+            "<p><b class='ra'>\"Ekans!\" it hisses.</b></p>",
+            "<p><b class='ra'>The smoke clears, and two teenagers step into the room.  One is a boy, and the other is a girl.  They wear white uniforms and black boots.  There's a letter \"R\" on their shirts.  Between them stands a catlike Pokemon.</b></p>",
+            "<p><b class='ra'>\"Allow us to introduce ourselves,\" says the boy.</b></p>",
+            "<p><b class='ra'>\"To protect the world from devastation,\" says the girl.</b></p>",
+            "<p><b class='ra'>\"To unite all peoples within our nation,\" says the boy.</b></p>",
+            "<img class='large-image' src='./images/team-rocket-enter.png'>",
+            "<p><b class='ra'>\"To denounce the evils of truth and love,\" says the girl.</b></p>",
+            "<p><b class='ra'>\"To extend our reach to the stars above,\" says the boy.</b></p>",
+            "<p><b class='ra'>\"Jessie!\" says the girl.</b></p>",
+            "<p><b class='ra'>\"James!\" says the boy.</b></p>",
+            "<p><b class='ra'>\"Team Rocket - blast off at the speed of light!\"</b></p>",
+            "<p><b class='ra'>\"Surrender now, or prepare to fight.\"</b></p>",
+            "<p><b class='ra'>\"Meowth! That's right!\" says Meowth, the catlike Pokemon.</b></p>",
+            "<p><b class='ra'>\"We're here for your Pokemon,\" says James.</b></p>",
+            "<img class='large-image' src='./images/koffing-enter-lg.png'><br>",
+            "<h2><b class='gp'>Pokemon Contest: Teams vs. Team!</p></h2>",
+            "<p><b class='ra'>The evil Team Rocket has broken into the Pokemon Center!  They want to steal all the Pokemon - including yours!</b></p>",
+            "<p><b class='ra'>\"Koffing!\" says the floating Pokemon as thick, green smoke billows from it.</b></p>",
+            "<p><b class='ra'>\"Ekans!\" hisses the snake Pokemon as it slither toward you.</b></p>",
+            "<p><b class='ra'>Will you send your Pokemon into battle?</b></p>",
+            "<p><b class='gp'>To protect the Pokemon Center, the Trainers must defeat Team Rocket's Pokemon.  Koffing and Ekans fight side by side, inflicting Hits on ALL good Pokemon that challenge them.</b></p>",
+            "<p><b class='gp'>The pair of evil Pokemon attacks once each round.  If the attack is successful, ALL of the Pokemon fighting them receive 3 Hit Tokens.</b></p>",
+            "<p><b class='gp'>(18 HP) Koffing & Ekans - Team Attack - Roll 5, 6 - 3 Hits</b></p>",
+            "<img class='large-image' src='./images/ekans-enter.png'>",
+            "<p><b class='gp'>If all of the Trainers' Pokemon faint, Team Rocket steals everything but the Trainers' starting Pokemon.  Erase all but one check from each Trainer's Checklist.</b></p>",
+            "<p><b class='gp'>If the Trainers' Pokemon inflict 18 Hits on the evil Pokemon, Team Rocket calls them back into their Poke Balls.  THen Team Rocket turns and runs away.</b></p>",
             "<center><img class='stop' src='./images/stop.webp'><br>",
             "<a onclick='goLastEpisode()'>Previous Episode</a></center>"
         ]
@@ -410,17 +558,90 @@ function goLastEpisode(){
 
 function goEpisode1(){
     currentLocation = "Professor Oak's Lab";
-    update(episodes[0]);
+    update(episodes[1]);
 };
 
 function goEpisode2(){
     currentLocation = "Pallet Town";
-    update(episodes[1]);
-    lastEpisode = 0;
+    update(episodes[2]);
+    lastEpisode = 1;
 };
 
 function goEpisode3(){
     currentLocation = "Pallet Town";
-    update(episodes[2]);
-    lastEpisode = 1;
+    update(episodes[3]);
+    lastEpisode = 2;
+};
+
+
+function goEpisode4(){
+    currentLocation = "Viridian Forest";
+    update(episodes[4]);
+    lastEpisode = 3;
+};
+
+function goEpisode5(){
+    currentLocation = "Viridian Forest";
+    update(episodes[5]);
+    lastEpisode = 4;
+};
+
+function goEpisode6(){
+    currentLocation = "Viridian Forest";
+    update(episodes[6]);
+    lastEpisode = 5;
+};
+
+function goEpisode7(){
+    currentLocation = "Viridian Forest";
+    update(episodes[7]);
+    lastEpisode = 6;
+};
+
+function goEpisode8(){
+    currentLocation = "Viridian City";
+    update(episodes[8]);
+    lastEpisode = 7;
+};
+
+function goEpisode9(){
+    currentLocation = "Viridian Forest";
+    update(episodes[9]);
+    lastEpisode = 8;
+};
+
+function goEpisode10(){
+    currentLocation = "Viridian Forest";
+    update(episodes[10]);
+    lastEpisode = 9;
+};
+
+function goEpisode11(){
+    currentLocation = "Viridian Forest";
+    update(episodes[11]);
+    lastEpisode = 10;
+};
+
+function goEpisode12(){
+    currentLocation = "Viridian Forest";
+    update(episodes[12]);
+    lastEpisode = 11;
+};
+
+function goEpisode13(){
+    currentLocation = "Viridian Forest";
+    update(episodes[13]);
+    lastEpisode = 12;
+};
+
+function goEpisode14(){
+    currentLocation = "Viridian Forest";
+    update(episodes[14]);
+    lastEpisode = 13;
+};
+
+function goEpisode15(){
+    currentLocation = "Viridian Forest";
+    update(episodes[15]);
+    lastEpisode = 14;
 };
