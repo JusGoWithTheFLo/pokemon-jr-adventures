@@ -43,21 +43,11 @@ const locations = [
             "<img class='large-image' src='./images/pikachu-and-mimikyu.png'>"]
     },
     {
-        name: "A Note to Parents",
+        name: "Table of Contents",
         "button text": ["Home", "", "", "Next Page"],
         "button functions": [goHome, "", "", goHowTo2],
-        text: ["<h1>A Note to Parents</h1>",
-            "<p>In Pokemon Jr., you and your children tell a story together.  More important, your children have an active role in determining what happens and how the story ends.  Through this storytelling game your children exercise their minds and flex their imaginations.  The game stresses reading skills as well as imagination and creativity, but it does so in a fun and exciting way.  Plus, it features the popular characters from the Pokemon animated series and video games that many children know and love.</p>",
-            "<p>Talk with children before playing.  Let them see how much they already know about Pokemon, and let them share that knowledge with you.</p>",
-            "<p>Encourage questions and interaction.  This storytelling game works best when everyone contributes to the tale.</p>",
-            "<p>Praise all efforts.  There are no right or wrong answers when creating a Pokemon story.</p>",
-            "<p>Finally, have fun.  Enjoy this time with your children.  It's a story - act in characters and use different voices to describe the tale.  It's a game - encourage involvement and don't take it too seriously.</p>"]
-    },
-    {
-        name: "Table of Contents",
-        "button text": ["Home", "", "Previous Page", "Next Page"],
-        "button functions": [goHome, "", goHowTo1, goHowTo3],
         text: ["<center><h1>Table of Contents</h1>",
+            "<p><a onclick='goHowTo2()'>A Note For Parents</a></p>",
             "<p><a onclick='goHowTo3()'>Object</a></p>",
             "<p><a onclick='goHowTo4()'>Setup</a></p>",
             "<p><a onclick='goHowTo5()'>Gameplay</a></p>",
@@ -65,6 +55,17 @@ const locations = [
             "<p><a onclick='goHowTo7()'>Pokemon Contest Example</a></p>",
             "<p><a onclick='goHowTo8()'>Telling Stories with Pokemon</a></p>",
             "<p><a onclick='pickChapter()'>Pick a Chapter</a></p></center>"]
+    },
+    {
+        name: "A Note to Parents",
+        "button text": ["Home", "", "Previous Page", "Next Page"],
+        "button functions": [goHome, "", goHowTo1, goHowTo3],
+        text: ["<h1>A Note to Parents</h1>",
+            "<p>In Pokemon Jr., you and your children tell a story together.  More important, your children have an active role in determining what happens and how the story ends.  Through this storytelling game your children exercise their minds and flex their imaginations.  The game stresses reading skills as well as imagination and creativity, but it does so in a fun and exciting way.  Plus, it features the popular characters from the Pokemon animated series and video games that many children know and love.</p>",
+            "<p>Talk with children before playing.  Let them see how much they already know about Pokemon, and let them share that knowledge with you.</p>",
+            "<p>Encourage questions and interaction.  This storytelling game works best when everyone contributes to the tale.</p>",
+            "<p>Praise all efforts.  There are no right or wrong answers when creating a Pokemon story.</p>",
+            "<p>Finally, have fun.  Enjoy this time with your children.  It's a story - act in characters and use different voices to describe the tale.  It's a game - encourage involvement and don't take it too seriously.</p>"]
     },
     {
         name: "Object",
@@ -219,7 +220,7 @@ const episodes = [
             "<p><b class='gp'>Pause to let the Trainers answer.</b></p>",
             "<p><b class='ra'>What do you do at the end of your first day as Pokemon Trainers?</b></p>",
             "<p><b class='gp'>Pause and let the Trainers answer.</b></p>",
-            "<img class='stop' src='./images/stop.webp'>",
+            "<center><img class='stop' src='./images/stop.webp'></center>",
         ]
     },
     {
@@ -235,8 +236,8 @@ const episodes = [
             "<p><b class='ra'>Will you send your Pokemon out to battle it?</b></p>",
             "<p><b class='gp'>To capture a Wild Pokemon, a Trainer must beat it in a Pokemon Contest.  There are as many Wild Pokemon as there are Trainers.  Let each Trainer pick a Power Card at random from the Power Deck.  That's the Wild Pokemon that Trainer is trying to capture.  Use the Wild Attack listed here instead of the powers listed on the Power Card.</b></p>",
             "<p><b class='gp'>Let each Trainer complete a Contest before going on to the next.  If the Trainer's Pokemon faints, that Wild Pokemon runs away.  If the Wild Pokemon faints, the Trainer adds that Power Card to his or her team.</b></p>",
-            "<img class='stop' src='./images/stop.webp'>",
-            "<a onclick='goLastEpisode()'>Previous Episode</a>"
+            "<center><img class='stop' src='./images/stop.webp'><br>",
+            "<a onclick='goLastEpisode()'>Previous Episode</a></center>"
         ]
     },
     {
@@ -264,8 +265,8 @@ const episodes = [
             "<p><b class='ra'>A little while later, Professor Oak steps out of the Pokemon Center.  Your Pokemon follow him out, looking clean and refreshed.  \"Good work, Trainers,\" Professor Oak says.  \"I'm proud of you all.\"</b></p>",
             "<p><b class='ra'>What do you say to Professor Oak?</b></p>",
             "<p><b class='ra'>\"Now it's time for you to head out on your own and begin your journey,\" the Professor says.  \"I'm sure you are all going to become Pokemon Masters some day.  Good luck!\"</b></p>",
-            "<img class='stop' src='./images/stop.webp'><br>",
-            "<a onclick='goLastEpisode()'>Previous Episode</a>"
+            "<center><img class='stop' src='./images/stop.webp'><br>",
+            "<a onclick='goLastEpisode()'>Previous Episode</a></center>"
         ]
     },
 ];//"<p><b class='gp'></b></p>",
@@ -359,11 +360,11 @@ function goHome(){
     currentLocation = "Home";
     update(locations[0]);
 };
-function goHowTo1(){ //a note to parents
+function goHowTo1(){ //table of contents
     update(locations[1]);
 };
 
-function goHowTo2(){ //table of contents
+function goHowTo2(){ //a note to parents
     update(locations[2]);
 };
 
