@@ -498,6 +498,122 @@ const episodes = [
             "<a onclick='goLastEpisode()'>Previous Episode</a></center>"
         ]
     },
+    {
+        episode: "13",
+        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goHome, openDice, openCoin, goEpisode14],
+        text: ["<h1>Episode 13: Pokemon Galore!</h1>",
+            "<h2><b class='gp'>Pokemon Contest: It's A Crowd!</p></h2>",
+            "<p><b class='ra'>The clearing ahead is extremely crowded.  There are dozens of Wild Pokemon lying around in the sun!  This is a great opportunity to add some Wild Pokemon to your teams - if you cn beat them in a Contest!</b></p>",
+            "<p><b class='ra'>Do you want to try to catch a Wild Pokemon?</b></p>",
+            "<p><b class='gp'>To capture a Wild Pokemon, a Trainer must beat it in a Pokemon Contest.  Let each Trainer who spots a Wild Pokemon pick a Power Card at rndom from the Power Deck.  That's the Wild Pokemon that Trainer is trying to capture.  Use the Wild Attack listed below instead of the powers listed on the Power Card.</b></p>",
+            "<p><b class='gp'>Let each Trainer complete a Contest before going on to the next.  If the Trainer's Pokemon faints, that Wild Pokemon runs away.  If the Wild Pokemon faints, the Trainer adds that Power Card to his or her team.</b></p>",
+            "<p><b class='gp'>(8 HP) Wild Pokemon - Wild Attack - Roll 4, 5, 6 - 3 Hits - and Flip Pokecoin 1 More Hits</b></p>",
+            "<img class='large-image' src='./images/pokedex-bulbasaur.png'>",
+            "<br><center><img class='stop' src='./images/stop.webp'><br>",
+            "<a onclick='goLastEpisode()'>Previous Episode</a></center>"
+        ]
+    },
+    {
+        episode: "14",
+        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goHome, openDice, openCoin, goEpisode15],
+        text: ["<h1>Episode 14: Samurai's Challenge!</h1>",
+            "<img class='large-image' src='./images/samurai-bug-catcher.png'>",
+            "<h2><b class='gp'>Pokemon Contest: Growlithe Attacks!</p></h2>",
+            "<p><b class='ra'>A kid dressed as a Samurai steps out of the trees.  \"I challenge the best among you to a friendly Pokemon Contest, one Trainer to another,\" he says.</b></p>",
+            "<p><b class='ra'>Do any of you want to accept the Samurai's challenge?</b></p>",
+            "<p><b class='gp'>Only one Trainer can accept the Samurai's challenge.  If more than one Trainer wants to battle his Pokemon, have them roll the die.  The Trainer with the highest die roll gets to participate in the challenge.  The Samurai sends Growlithe out to battle!</b></p>",
+            "<p><b class='gp'>(8 HP) Samurai's Gowlithe - Bite - Roll 3, 4, 5, 6 - 2 Hits - and Flip Pokecoin 1 More Hits</b></p>",
+            "<img class='large-image' src='./images/growlithe-block.png'>",
+            "<p><b class='ra'>After the challenge, the Samurai says, \"Thank you for practiciting with me.\"  Then he leaves.</b></p>",
+            "<center><img class='stop' src='./images/stop.webp'><br>",
+            "<a onclick='goLastEpisode()'>Previous Episode</a></center>"
+        ]
+    },
+    {
+        episode: "15",
+        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goHome, openDice, openCoin, goEpisode16],
+        text: ["<h1>Episode 15: Pewter City Contest!</h1>",
+            "<p><b class='ra'>After a lot of walking through the forest, you finally reach Pewter City.</b></p>",
+            "<p><b class='ra'>What's in this city?  What kinds of stores?  What kinds of restaurants?  What else do you see?</b></p>",
+            "<p><b class='ra'>The Pokemon Center is easy to find.  It's a great place to rest after your long journey.</b></p>",
+            "<p><b class='ra'>\"Welcome to the Pewter City Pokemon Center,\" the nurse at the front desk says.  \"Do you have any Pokemon that need to be revived?\"</b></p>",
+            "<p><b class='gp'>Any Pokemon that fainted during the long journey from Viridian City to Pewter City can be rejuvinated here at the Pokemon Center.  The nurse gladly takes any of them for treatment and healing.</b></p>",
+            "<p><b class='ra'>While you are waiting, Nurse Joy brings you food and drinks.</b></p>",
+            "<p><b class='ra'>What kind of food and drinks does she bring?</b></p>",
+            "<p><b class='ra'>\"What brings you to Pewter City?\" Nurse Joy asks.</b></p>",
+            "<p><b class='gp'>After the Trainers finish telling her about their adventures, Nurse Joy has an idea.</b></p>",
+            "<p><b class='ra'>\"You should go to the Pewter City Gym,\" Nurse Joy says.  \"I bet the gym leader can teach you a lot about being Pokemon Trainers.\"</b></p>",
+            "<img class='large-image' src='./images/gym-pewter-city.png'>",
+            "<p><b class='ra'>Later, at the Pewter City Gym, you meet Brock.  He's the gym leader.</b></p>",
+            "<p><b class='ra'>\"Hi.  Welcome to my gym,\" Brock says.  \"So you want to practice your Pokemon against my Pokemon?  Okay, but you asked for it!\"</b></p>",
+            "<img class='large-image' src='./images/brock-onix.png'>",
+            "<h2><b class='gp'>Pokemon Contest: Onix Atacks!</p></h2>",
+            "<p><b class='gp'>Brock allows each Trainer to challenge his Pokemon, but they must battle it one at a time.  Brock uses Onix.  After each match, Brock Heals Onix and returns any Hit Tokens it received to the Hit Token pile.  To beat it, each Trainer's Pokemon must Hit it for a number of Hit Tokens equal to or greater than its Hit Point total.</b></p>",
+            "<p><b class='ra'>\"This is a tough Contest,\" Brock says.  \"Remember, this is just a training Contest.  It's okay to lose.  Every challenge teaches us something new.\"</b></p>",
+            "<p><b class='gp'>(12 HP) Brock's Onix - Slam - Roll 4, 5, 6 - 4 Hits - and Flip Pokecoin 1 More Hits</b></p>",
+            "<br><center><img class='stop' src='./images/stop.webp'><br>",
+            "<a onclick='goLastEpisode()'>Previous Episode</a></center>"
+        ]
+    },
+    {
+        episode: "16",
+        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goHome, openDice, openCoin, ""],
+        text: ["<h1>Episode 16: Fire!</h1>",
+            "<p><b class='ra'>After the training contest with Brock, you go back to the Pewter City Pokemon Center to rest.  Your Pokemon are revived, and you get to eat and wash up.  Later, you hear a call for help.  The call for help comes from outside.  You run to the door and see that a nearby building is on fire!</b></p>",
+            "<p><b class='ra'>What kind of building is it?  Why is fire dangerous?  Are you scared?</b></p>",
+            "<p><b class='ra'>Officer Jenny notices you and comes running over.  \"Hey!\" she says.  \"Will you send your Pokemon to help put out the fire?\"</b></p>",
+            "<img class='large-image' src='./images/officer-jenny-salute.png'>",
+            "<p><b class='gp'>Each Trainer can select one Pokemon.  The Pokemon team up to put out the fire.  Ask the Trainers what the Pokemon are doing.  Some could be tossing dirt or water on the fire, for example.  This is a good oppotunity to help teach the Trainers about the dangers of fire while also telling an exciting story.</b></p>",
+            "<p><b class='gp'>When the Pokemon have worked together to get 16 Hits, they have extinguished the fire.</b></p>",
+            "<p><b class='gp'>However, the fire is dangerous.  It's hot and smoky and hurts the pokemon.  Every round, flip the Pokecoin.  If the TAILS side lands face up, each Pokemon battling the fire receives 2 Hit Tokens.</b></p>",
+            "<p><b class='gp'>If ALL of the Pokemon fighting the fire faint before the fire is put out, then Brock and the members of the Pewter City Gym arrive to save the day.</b></p>",
+            "<p><b class='ra'>The fire was only a trick!  While you were helping to put it out, Team Rocket has sneaked up on you!</b></p>",
+            "<img class='large-image' src='./images/team-rocket-enter.png'>",
+            "<p><b class='ra'>\"To protect the world from devastation,\" says Jessie.</b></p>",
+            "<p><b class='ra'>\"To unite all peoples within our nation,\" says James.</b></p>",
+            "<p><b class='ra'>\"To denounce the evils of truth and love,\"</b></p>",
+            "<p><b class='ra'>\"To extend our reach to the stars above,\"</b></p>",
+            "<p><b class='ra'>\"Jessie!\"</b></p>",
+            "<p><b class='ra'>\"James!\"</b></p>",
+            "<p><b class='ra'>\"Team Rocket - blast off at the speed of light!\" says Jessie</b></p>",
+            "<p><b class='ra'>\"Surrender now, or prepare to fight.\" Says James</b></p>",
+            "<p><b class='ra'>\"Meowth! That's right!\" says Meowth</b></p>",
+            "<p><b class='ra'>\"This is your last chance,\" James says, pulling a Poke Ball from his belt.</b></p>",
+            "<p><b class='ra'>\"We want your Pokemon,\" Jessie says, holding a Poke Ball of her own.</b></p>",
+            "<p><b class='ra'>\"And we'll take them by force if necessary,\" says Meowth as Jessie and James toss their Poke Balls.</b></p>",
+            "<p><b class='ra'>\"Koffing!\" says the first Pokemon to emerge in a cloud of thick, green smoke.</b></p>",
+            "<p><b class='ra'>\"Ekans!\" hisses the second as it slithers from its Poke Ball.</b></p>",
+            "<p><b class='ra'>\"Meowth!\" says Meowth, leaping to join them.</b></p>",
+            "<p><b class='ra'>Will you send your Pokemon into battle?</b></p>",
+            "<img class='large-image' src='./images/team-rocket-koffing-meowth-ekans.png'>",
+
+
+
+            "<p><b class='ra'>\"Welcome to the Pewter City Pokemon Center,\" the nurse at the front desk says.  \"Do you have any Pokemon that need to be revived?\"</b></p>",
+            "<p><b class='gp'>Any Pokemon that fainted during the long journey from Viridian City to Pewter City can be rejuvinated here at the Pokemon Center.  The nurse gladly takes any of them for treatment and healing.</b></p>",
+            "<p><b class='ra'>While you are waiting, Nurse Joy brings you food and drinks.</b></p>",
+            "<p><b class='ra'>What kind of food and drinks does she bring?</b></p>",
+            "<p><b class='ra'>\"What brings you to Pewter City?\" Nurse Joy asks.</b></p>",
+            "<p><b class='gp'>After the Trainers finish telling her about their adventures, Nurse Joy has an idea.</b></p>",
+            "<p><b class='ra'>\"You should go to the Pewter City Gym,\" Nurse Joy says.  \"I bet the gym leader can teach you a lot about being Pokemon Trainers.\"</b></p>",
+            "<img class='large-image' src='./images/gym-pewter-city.png'>",
+            "<p><b class='ra'>Later, at the Pewter City Gym, you meet Brock.  He's the gym leader.</b></p>",
+            "<p><b class='ra'>\"Hi.  Welcome to my gym,\" Brock says.  \"So you want to practice your Pokemon against my Pokemon?  Okay, but you asked for it!\"</b></p>",
+            "<img class='large-image' src='./images/brock-onix.png'>",
+            "<h2><b class='gp'>Pokemon Contest: Onix Atacks!</p></h2>",
+            "<p><b class='gp'>Brock allows each Trainer to challenge his Pokemon, but they must battle it one at a time.  Brock uses Onix.  After each match, Brock Heals Onix and returns any Hit Tokens it received to the Hit Token pile.  To beat it, each Trainer's Pokemon must Hit it for a number of Hit Tokens equal to or greater than its Hit Point total.</b></p>",
+            "<p><b class='ra'>\"This is a tough Contest,\" Brock says.  \"Remember, this is just a training Contest.  It's okay to lose.  Every challenge teaches us something new.\"</b></p>",
+            "<p><b class='gp'>(12 HP) Brock's Onix - Slam - Roll 4, 5, 6 - 4 Hits - and Flip Pokecoin 1 More Hits</b></p>",
+            "<p><b class='ra'>After the challenge, the Brock says, \"That was a great Contest!  As proof of your victory, I confer upon you this...\"  Brock pulls something out of his jacket.  \"The official Pokemon League Boulder Badge!\"</b></p>", //spice
+            "<img class='badge' src='./images/badge-boulder.png'>",
+            "<br><center><img class='stop' src='./images/stop.webp'><br>",
+            "<a onclick='goLastEpisode()'>Previous Episode</a></center>"
+        ]
+    },
 ];//"<p><b class='gp'></b></p>",
 //-------------------------ACTIONS-------------------------
 const actions = [
@@ -720,7 +836,13 @@ function goEpisode14(){
 };
 
 function goEpisode15(){
-    currentLocation = "Viridian Forest";
+    currentLocation = "Pewter City";
     update(episodes[15]);
     lastEpisode = 14;
+};
+
+function goEpisode16(){
+    currentLocation = "Pewter City";
+    update(episodes[16]);
+    lastEpisode = 15;
 };

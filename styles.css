@@ -114,6 +114,14 @@ b.gp{
     height: 42px;
 }
 
+.badge{
+    border-radius: 50%;
+    display: block;
+    width: 50vw;
+    max-width: 180px;
+    margin: auto;
+}
+
 /*-----DICE-----*/
 #actionScreen{
     background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
