@@ -35,10 +35,10 @@ const locations = [
     //--------------------------------------------------
     {
         name: "Home",
-        "button text": ["Instructions", "", "Pick Episode", "Start Adventure!"],
+        "button text": ["How-To", "", "Episode List", "Start Adventure!"],
         "button functions": [goHowTo1, "", selectEpisode, goEpisode1],
         text: ["<p>Welcome to Pokemon Jr Adventures FLO.EX, a game where you and your children tell a story together!</p>",
-            "<p>Tap on \"Setup\", \"Gameplay\", or \"Contest Rules\" to read instructions on how to play this game.</p>",
+            "<p>Tap on \"How-To\" for instructions on how to play this game.</p>",
             "<p>Tap on \"Start Adventure!\" when you and your trainers are ready to begin!</p>",
             "<img class='large-image' src='./images/pikachu-and-mimikyu.png'>"]
     },
@@ -58,8 +58,8 @@ const locations = [
     },
     {
         name: "A Note to Parents",
-        "button text": ["Home", "", "Previous Page", "Next Page"],
-        "button functions": [goHome, "", goHowTo1, goHowTo3],
+        "button text": ["Home", "Table of Contents", "Previous Page", "Next Page"],
+        "button functions": [goHome, goHowTo1, goHowTo1, goHowTo3],
         text: ["<h1>A Note to Parents</h1>",
             "<p>In Pokemon Jr., you and your children tell a story together.  More important, your children have an active role in determining what happens and how the story ends.  Through this storytelling game your children exercise their minds and flex their imaginations.  The game stresses reading skills as well as imagination and creativity, but it does so in a fun and exciting way.  Plus, it features the popular characters from the Pokemon animated series and video games that many children know and love.</p>",
             "<p>Talk with children before playing.  Let them see how much they already know about Pokemon, and let them share that knowledge with you.</p>",
