@@ -590,26 +590,15 @@ const episodes = [
             "<p><b class='ra'>\"Meowth!\" says Meowth, leaping to join them.</b></p>",
             "<p><b class='ra'>Will you send your Pokemon into battle?</b></p>",
             "<img class='large-image' src='./images/team-rocket-koffing-meowth-ekans.png'>",
-
-
-
-            "<p><b class='ra'>\"Welcome to the Pewter City Pokemon Center,\" the nurse at the front desk says.  \"Do you have any Pokemon that need to be revived?\"</b></p>",
-            "<p><b class='gp'>Any Pokemon that fainted during the long journey from Viridian City to Pewter City can be rejuvinated here at the Pokemon Center.  The nurse gladly takes any of them for treatment and healing.</b></p>",
-            "<p><b class='ra'>While you are waiting, Nurse Joy brings you food and drinks.</b></p>",
-            "<p><b class='ra'>What kind of food and drinks does she bring?</b></p>",
-            "<p><b class='ra'>\"What brings you to Pewter City?\" Nurse Joy asks.</b></p>",
-            "<p><b class='gp'>After the Trainers finish telling her about their adventures, Nurse Joy has an idea.</b></p>",
-            "<p><b class='ra'>\"You should go to the Pewter City Gym,\" Nurse Joy says.  \"I bet the gym leader can teach you a lot about being Pokemon Trainers.\"</b></p>",
-            "<img class='large-image' src='./images/gym-pewter-city.png'>",
-            "<p><b class='ra'>Later, at the Pewter City Gym, you meet Brock.  He's the gym leader.</b></p>",
-            "<p><b class='ra'>\"Hi.  Welcome to my gym,\" Brock says.  \"So you want to practice your Pokemon against my Pokemon?  Okay, but you asked for it!\"</b></p>",
-            "<img class='large-image' src='./images/brock-onix.png'>",
             "<h2><b class='gp'>Pokemon Contest: Onix Atacks!</p></h2>",
-            "<p><b class='gp'>Brock allows each Trainer to challenge his Pokemon, but they must battle it one at a time.  Brock uses Onix.  After each match, Brock Heals Onix and returns any Hit Tokens it received to the Hit Token pile.  To beat it, each Trainer's Pokemon must Hit it for a number of Hit Tokens equal to or greater than its Hit Point total.</b></p>",
-            "<p><b class='ra'>\"This is a tough Contest,\" Brock says.  \"Remember, this is just a training Contest.  It's okay to lose.  Every challenge teaches us something new.\"</b></p>",
-            "<p><b class='gp'>(12 HP) Brock's Onix - Slam - Roll 4, 5, 6 - 4 Hits - and Flip Pokecoin 1 More Hits</b></p>",
-            "<p><b class='ra'>After the challenge, the Brock says, \"That was a great Contest!  As proof of your victory, I confer upon you this...\"  Brock pulls something out of his jacket.  \"The official Pokemon League Boulder Badge!\"</b></p>", //spice
-            "<img class='badge' src='./images/badge-boulder.png'>",
+            "<p><b class='gp'>Koffing, Ekans, and Meowth fight side by side, inflicting Hits on ALL Pokemon that challenge them.</b></p>",
+            "<p><b class='gp'>The trio of evil Pokemon attacks ONCE each round.  If the attack is successfuly, ALL of the Pokemon fighting them receive 3 Hit Tokens.</b></p>",
+            "<p><b class='gp'>If all of the Trainers' Pokemon faint, Team Rocket steals everything but their starting Pokemon.</b></p>",
+            "<p><b class='gp'>If the Trainers' Pokemon inflict 22 Hits on the evil Pokemon, Team Rocket calls them back and runs away.</b></p>",
+            "<p><b class='gp'>(22 HP) Koffing, Ekans, & Meowth - Team Attack - Roll 4, 5, 6 - 3 Hits</b></p>",
+            "<p><b class='ra'>\"We'll be back,\" Jessie and James say as they run away.</b></p>",
+            "<p><b class='ra'>\"Yay!\" says Officer Jenny.</b></p>",
+            "<p><b class='ra'>\"Good job!\" says Brock.  And Nurse Joy throws a party for everyone at the Pokemon Center!</b></p>",
             "<br><center><img class='stop' src='./images/stop.webp'><br>",
             "<a onclick='goLastEpisode()'>Previous Episode</a></center>"
         ]
