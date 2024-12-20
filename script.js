@@ -669,22 +669,19 @@ const actions = [
 TOGGLE CONTROL BAR
     {
         name: "Episode Controls",
-        "button text": ["Home", "Bag", "Actions", "Next Episode"],
+        "button text": ["Previous Episode", "Settings", "Actions", "Next Episode"],
         "button functions": [goHome, openBag, openActions, ""],
     },
-
+    {
+        name: "Settings",
+        "button text": ["Back To Episode", "Pokedex", "Players' Info", ""],
+        "button functions": [goHome, openBag, openActions, ""],
+    },
     {
         name: "Actions Controls",
         "button text": ["Back", "Dice Roll", "Coin Flip", ""],
         "button functions": [goHome, openBag, openActions, ""],
     },
-
-    {
-        name: "Bag Controls",
-        "button text": ["Back", "Players Info", "Coin Flip", ""],
-        "button functions": [goHome, openBag, openActions, ""],
-    },
-
     {
         name: "Players Info Controls",
         "button text": ["Back", player[1].name, player[2].name, player[2].name],
@@ -757,13 +754,19 @@ function openCoin(){
     openActionScreen();
 };
 function diceRoll(){
-    let dice = Math.floor(Math.random() * 6) +1;
-    action.innerText = dice;
+    setTimeout(() => {
+        let dice = Math.floor(Math.random() * 6) +1;
+        action.innerText = dice;
+      }, 500);
+    action.innerText = "";
 };
 function flipCoin(){
-    let coin = ["Heads", "Tails"];
-    let flip = Math.floor(Math.random() * coin.length);
-    action.innerText = coin[flip];
+    setTimeout(() => {
+        let coin = ["<img id='token' class='token' src='./images/token-front.png'>", "<img class='token' src='./images/token-back.png'>"];
+        let flip = Math.floor(Math.random() * coin.length);
+        action.innerHTML = coin[flip];
+    }, 500);
+    action.innerHTML = "";
 };
 
 //---------------HOME-------------------
