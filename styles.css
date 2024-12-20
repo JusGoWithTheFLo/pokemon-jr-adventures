@@ -11,12 +11,14 @@
     --font-family1: 'Pokemon Solid', sans-serif;
 }
 
+body,
 h1,
 h2,
 p,
 #stats,
-#action,
-button{
+#controls button,
+#actionScreen,
+#actionScreen button{
     font-family: var(--font-family1);
     letter-spacing: 2px;
 }
@@ -29,7 +31,6 @@ body{
     margin: 0 auto;
     min-height: 100dvh;
     width: 100%;
-    font-family: var(--font-family1);
 }
 
 /*------------------------------*/
@@ -60,6 +61,10 @@ body{
 
 .stat{
     color: var(--color3);
+}
+
+.money{ /*--stat for expansion!--*/
+    display: none;
 }
 
 #text{
@@ -98,9 +103,7 @@ body{
     border-radius: 10px;
     color: rgb(001, 032, 025); /*---rgba 001 032 25 +/- brighter/darker---*/
     cursor: pointer;
-    font-family: var(--font-family1);
     font-size: 12px;
-    letter-spacing: 2px;
     width: calc(70px / 2 * 3);
     height: 70px;
 }
@@ -145,6 +148,12 @@ b.gp{
     width: 90vw;
     max-width: 500px;
     margin: auto;
+}
+
+.narrator{
+    border-radius: 50%;
+    margin: 0 5px;
+    max-height: 25px;
 }
 
 .stop{
