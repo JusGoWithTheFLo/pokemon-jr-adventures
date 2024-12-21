@@ -22,9 +22,6 @@ const action = document.querySelector("#action");
 const action_button1 = document.querySelector("#action_button1");
 const action_button2 = document.querySelector("#action_button2");
 
-const testText = document.querySelector("#testText");
-
-
 //---------------------
 //-----OBJECTS
 //---------------------
@@ -204,8 +201,8 @@ const episodes = [
     {},
     {
         episode: 1,
-        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin, goEpisode2],
+        "button text": ["Menu","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goMenu, openDice, openCoin, goEpisode2],
         text: ["<h1>Episode 1: I Choose You!</h1>",
             "<p><img class='narrator' src='./images/narrator.png'><b class='ra'>You and your friends are all Pokemon Trainers.  You want to become the best Pokemon Masters in the world!  But first you need a Pokemon.</b></p>",
             "<p><b class='ra'>You go to Professor Oak's lab to choose your starting Pokemon.</b></p>",
@@ -229,8 +226,8 @@ const episodes = [
     },
     {
         episode: 2,
-        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin, goEpisode3],
+        "button text": ["Menu","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goMenu, openDice, openCoin, goEpisode3],
         text: ["<h1>Episode 2: Gotta Catch 'Em!</h1>",
             "<p><img class='narrator' src='./images/narrator.png'><b class='ra'>The next day, Professor Oak leads you to the edge of Pallet Town.  \"Wild Pokemon live in the fields of long wavy grass outside of town,\" Professor Oak says.  \"I'll watch as you go into the grass and try to catch a Wild Pokemon.  But first, let me give you each a Pokemon Checklist.  Use it to keep track of which Pokemon you have caught.  Good luck, Trainers.\"</b></p>",
             "<p><b class='gp'>Give each Trainer one Pokemon Checklist.  A Trainer can write his or her name at the top and check off the Pokemon he or she received in Episode 1.</b></p>",
@@ -247,8 +244,8 @@ const episodes = [
     },
     {
         episode: "3",
-        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin, goEpisode4],
+        "button text": ["Menu","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goMenu, openDice, openCoin, goEpisode4],
         text: ["<h1>Episode 3: Spearow Trouble!</h1>",
             "<p><img class='narrator' src='./images/narrator.png'><b class='ra'>You and your Pokemon are relaxing and having fun at the Pallet Town Pokemon Center.</b></p>",
             "<p><b class='ra'>What are you doing?</b></p>",
@@ -277,8 +274,8 @@ const episodes = [
     },
     {
         episode: "4",
-        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin, goEpisode5],
+        "button text": ["Menu","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goMenu, openDice, openCoin, goEpisode5],
         text: ["<h1>Episode 4: Viridian Forest</h1>",
             "<p><img class='narrator' src='./images/narrator.png'><b class='ra'>Professor Oak points down the road.  \"That way leads to Viridian Forest,\" he says.  \"That's where you should begin your journey.  Good-bye!\"</b></p>",
             "<p><b class='ra'>What do you say to Professor Oak?</b></p>",
@@ -307,8 +304,8 @@ const episodes = [
     },
     {
         episode: "5",
-        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin, goEpisode6],
+        "button text": ["Menu","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goMenu, openDice, openCoin, goEpisode6],
         text: ["<h1>Episode 5: The Broken Bridge!</h1>",
             "<p><img class='narrator' src='./images/narrator.png'><b class='ra'>There's a river ahead of you.  A little boy sits at the edge of the river.  He looks very sad.</b></p>",
             "<p><b class='ra'>What does the little boy look like?</b></p>",
@@ -330,8 +327,8 @@ const episodes = [
     },
     {
         episode: "6",
-        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin, goEpisode7],
+        "button text": ["Menu","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goMenu, openDice, openCoin, goEpisode7],
         text: ["<h1>Episode 6: Mean Pidgey</h1>",
             "<p><img class='narrator' src='./images/narrator.png'><b class='ra'>The trip through the forest has been quiet.  You haven't seen any sign of other people or Pokemon.</b></p>",
             "<p><b class='ra'>Around the bend, tall grass grows across the path.  In the middle of the tall grass, you see a Pidgey.</b></p>",
@@ -348,8 +345,8 @@ const episodes = [
     },
     {
         episode: "7",
-        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin, goEpisode8],
+        "button text": ["Menu","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goMenu, openDice, openCoin, goEpisode8],
         text: ["<h1>Episode 7: Spearow Fury!</h1>",
             "<p><img class='narrator' src='./images/narrator.png'><b class='ra'>You hear the sound of battle up ahead.  It sounds like a lot of Pokemon are fighting.  The path curves around a thick clump of trees.  There, in the clearing ahead, a lone Pikachu battles against a flock of Spearows.  It looks like the same flock you fought in Pallet Town!</b></p>",
             "<p><b class='ra'>The poor Pikachu falls to the forest floor, but the Spearows keep pecking and diving and clawing at the hurt Pokemon.</b></p>",
@@ -370,8 +367,8 @@ const episodes = [
     },
     {
         episode: "8",
-        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin, goEpisode9],
+        "button text": ["Menu","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goMenu, openDice, openCoin, goEpisode9],
         text: ["<h1>Episode 8: Pokemon Emergency!</h1>",
             "<p><img class='narrator' src='./images/narrator.png'><b class='ra'>You rush the hurt Pikachu into Viridian City.  A police officer stops you.</b></p>",
             "<p><b class='ra'>\"What's the big hurry?\" Officer Jenny asks.</b></p>",
@@ -423,8 +420,8 @@ const episodes = [
     },
     {
         episode: "9",
-        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin, goEpisode10],
+        "button text": ["Menu","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goMenu, openDice, openCoin, goEpisode10],
         text: ["<h1>Episode 9: Pokemon Hunting!</h1>",
             "<p><img class='narrator' src='./images/narrator.png'><b class='ra'>You leave Viridian City behind and head out into the forest.  It isn't long before you come upon a field of tall grass.  Maybe there are Wild Pokemon here!  It would be great to catch another Pokemon to add to your team.</b></p>",
             "<p><b class='ra'>Do you want to go hunting in the tall grass?</b></p>",
@@ -440,8 +437,8 @@ const episodes = [
     },
     {
         episode: "10",
-        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin, goEpisode11],
+        "button text": ["Menu","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goMenu, openDice, openCoin, goEpisode11],
         text: ["<h1>Episode 10: Camp Out!</h1>",
             "<p><img class='narrator' src='./images/narrator.png'><b class='ra'>You've been walking all day and now it is time to rest for the night.  You find a nice campsite just before the sun starts to set.</b></p>",
             "<img class='large-image' src='./images/path-evening.png'>",
@@ -462,8 +459,8 @@ const episodes = [
     },
     {
         episode: "11",
-        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin, goEpisode12],
+        "button text": ["Menu","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goMenu, openDice, openCoin, goEpisode12],
         text: ["<h1>Episode 11: Gary's Challenge!</h1>",
             "<img class='large-image' src='./images/gary-forest.png'>",
             "<p><img class='narrator' src='./images/narrator.png'><b class='ra'>The next day Gary Oak, Professor Oak's grandson, waits for you along the forest path.</b></p>",
@@ -482,8 +479,8 @@ const episodes = [
     },
     {
         episode: "12",
-        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin, goEpisode13],
+        "button text": ["Menu","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goMenu, openDice, openCoin, goEpisode13],
         text: ["<h1>Episode 12: Ambushed!</h1>",
             "<p><img class='narrator' src='./images/narrator.png'><b class='ra'>The forest path winds peacefully between the trees.  It's a nice day.</b></p>",
             "<p><b class='ra'>What is this nice day like?</b></p>",
@@ -502,8 +499,8 @@ const episodes = [
     },
     {
         episode: "13",
-        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin, goEpisode14],
+        "button text": ["Menu","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goMenu, openDice, openCoin, goEpisode14],
         text: ["<h1>Episode 13: Pokemon Galore!</h1>",
             "<h2><b class='gp'>Pokemon Contest: It's A Crowd!</p></h2>",
             "<p><img class='narrator' src='./images/narrator.png'><b class='ra'>The clearing ahead is extremely crowded.  There are dozens of Wild Pokemon lying around in the sun!  This is a great opportunity to add some Wild Pokemon to your teams - if you can beat them in a Contest!</b></p>",
@@ -518,8 +515,8 @@ const episodes = [
     },
     {
         episode: "14",
-        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin, goEpisode15],
+        "button text": ["Menu","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goMenu, openDice, openCoin, goEpisode15],
         text: ["<h1>Episode 14: Samurai's Challenge!</h1>",
             "<img class='large-image' src='./images/samurai-bug-catcher.png'>",
             "<h2><b class='gp'>Pokemon Contest: Growlithe Attacks!</p></h2>",
@@ -535,8 +532,8 @@ const episodes = [
     },
     {
         episode: "15",
-        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin, goEpisode16],
+        "button text": ["Menu","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goMenu, openDice, openCoin, goEpisode16],
         text: ["<h1>Episode 15: Pewter City Contest!</h1>",
             "<p><img class='narrator' src='./images/narrator.png'><b class='ra'>After a lot of walking through the forest, you finally reach Pewter City.</b></p>",
             "<p><b class='ra'>What's in this city?  What kinds of stores?  What kinds of restaurants?  What else do you see?</b></p>",
@@ -562,8 +559,8 @@ const episodes = [
     },
     {
         episode: "16",
-        "button text": ["Home","Dice Roll", "Coin Flip", "Next Episode!"],
-        "button functions": [goHome, openDice, openCoin, ""],
+        "button text": ["Menu","Dice Roll", "Coin Flip", "Next Episode!"],
+        "button functions": [goMenu, openDice, openCoin, ""],
         text: ["<h1>Episode 16: Fire!</h1>",
             "<p><img class='narrator' src='./images/narrator.png'><b class='ra'>After the training contest with Brock, you go back to the Pewter City Pokemon Center to rest.  Your Pokemon are revived, and you get to eat and wash up.  Later, you hear a call for help.  The call for help comes from outside.  You run to the door and see that a nearby building is on fire!</b></p>",
             "<p><b class='ra'>What kind of building is it?  Why is fire dangerous?  Are you scared?</b></p>",
@@ -606,6 +603,98 @@ const episodes = [
         ]
     },
 ];//"<p><b class='gp'></b></p>",
+//-------------------------MENU-------------------------
+const menu =[
+    {
+        item: "Menu",
+        "button text": ["Back","", "", ""],
+        "button functions": [goCurrentEpisode, "", "", ""],
+        text: ["<center><h1>Menu</h1>",
+            "<p><a onclick='goHome()'>Home</a></p>",
+            "<p><a onclick='goChecklist()'>Checklist</a></p>",
+            "<p><a onclick='goPlayers()'>Players</a></p>",
+            "</center>"
+        ]
+
+    },
+    {
+        item: "Checklist",
+        "button text": ["Back","", "", ""],
+        "button functions": [goMenu, "", "", ""],
+        text: ["<center><h1>Checklist</h1>",
+            "<p><img class='large-image' src='./images/checklist-front.png'></p>",
+            "<p><img class='large-image' src='./images/checklist-back.png'></p>",
+        ]
+    },/*
+    {
+        item: "Players",
+        "button text": ["Back","", "", ""],
+        "button functions": [goMenu, "", "", ""],
+        text: ["<center><h1>Players</h1>",
+            "<p id='player1'><a onclick='goPlayer1'></a></p>",
+            "<p id='player2'><a onclick='goPlayer2'></a></p>",
+            "<p id='player3'><a onclick='goPlayer3'></a></p>",
+            "<p id='player4'><a onclick='goPlayer4'></a></p>",
+            "<p id='player5'><a onclick='goPlayer5'></a></p>",
+            "<p id='player6'><a onclick='goPlayer6'></a></p>",
+            "<p id='player7'><a onclick='goPlayer7'></a></p>",
+            "<p id='player8'><a onclick='goPlayer8'></a></p>",
+            "</center>"
+        ]
+    },*/
+];
+//-------------------------PLAYERS-------------------------
+/*
+const player1 = document.querySelector("#player1");
+const player2 = document.querySelector("#player2");
+const player3 = document.querySelector("#player3");
+const player4 = document.querySelector("#player4");
+const player5 = document.querySelector("#player5");
+const player6 = document.querySelector("#player6");
+const player7 = document.querySelector("#player7");
+const player8 = document.querySelector("#player8");
+
+function addPlayers(){
+    update(players[0]);
+}
+
+const players =[
+    {},
+    { //player1
+        name: "",
+        pokemon: [],
+    },
+    { //player2
+        name: "",
+        pokemon: [],
+    },
+    { //player3
+        name: "",
+        pokemon: [],
+    },
+    { //player4
+        name: "",
+        pokemon: [],
+    },
+    { //player5
+        name: "",
+        pokemon: [],
+    },
+    { //player6
+        name: "",
+        pokemon: [],
+    },
+    { //player7
+        name: "",
+        pokemon: [],
+    },
+    { //player8
+        name: "",
+        pokemon: [],
+    },
+]
+*/
+
 /*
 //-------------------------ITEMS-------------------------
 const items = [
@@ -665,34 +754,6 @@ const actions = [
     }
 ];
 
-/*
-TOGGLE CONTROL BAR
-    {
-        name: "Episode Controls",
-        "button text": ["Previous Episode", "Settings", "Actions", "Next Episode"],
-        "button functions": [goHome, openBag, openActions, ""],
-    },
-    {
-        name: "Settings",
-        "button text": ["Back To Episode", "Pokedex", "Players' Info", ""],
-        "button functions": [goHome, openBag, openActions, ""],
-    },
-    {
-        name: "Actions Controls",
-        "button text": ["Back", "Dice Roll", "Coin Flip", ""],
-        "button functions": [goHome, openBag, openActions, ""],
-    },
-    {
-        name: "Players Info Controls",
-        "button text": ["Back", player[1].name, player[2].name, player[2].name],
-        "button functions": [goHome, openBag, openActions, ""],
-    },
-
-
-PLAYER INFO
-
-*/
-
 //---------------------
 //-----INITIALIZE BUTTONS
 //---------------------
@@ -707,32 +768,52 @@ action_button2.onclick = closeActionScreen;
 //---------------------
 //-----UPDATE FUNCTION
 //---------------------
-function update(location){
+function update(object){
     locationText.innerText = currentLocation;
-    text.innerHTML = location.text.join(" ");
-    button1.innerText = location["button text"][0];
-    button2.innerText = location["button text"][1];
-    button3.innerText = location["button text"][2];
-    button4.innerText = location["button text"][3];
-    button1.onclick = location["button functions"][0];
-    button2.onclick = location["button functions"][1];
-    button3.onclick = location["button functions"][2];
-    button4.onclick = location["button functions"][3];
-    document.body.scrollTop = 0; //for safari
-    document.documentElement.scrollTop = 0; //for chrome
+    if(object.text){ //if object contains text (locations)
+        text.innerHTML = object.text.join(" ");
+        button1.innerText = object["button text"][0];
+        button2.innerText = object["button text"][1];
+        button3.innerText = object["button text"][2];
+        button4.innerText = object["button text"][3];
+        button1.onclick = object["button functions"][0];
+        button2.onclick = object["button functions"][1];
+        button3.onclick = object["button functions"][2];
+        button4.onclick = object["button functions"][3];
+        document.body.scrollTop = 0; //for safari
+        document.documentElement.scrollTop = 0; //for chrome
+    } else { //if objet does not contain text (actions)
+        action_button1.innerText = object["button text"][0];
+        action_button2.innerText = object["button text"][1];
+        action_button1.onclick = object["button functions"][0];
+        action_button2.onclick = object["button functions"][1];
+    }
 };
 
+/*--REPLACED IN UPDATE() FUNCTION
 function updateActions(action){
     action_button1.innerText = action["button text"][0];
     action_button2.innerText = action["button text"][1];
     action_button1.onclick = action["button functions"][0];
     action_button2.onclick = action["button functions"][1];
 };
-
+*/
 
 //---------------------
 //-----GAMEPLAY FUNCTIONS
 //---------------------
+//---------------MENU------------------
+function goMenu(){
+    update(menu[0]);
+};
+
+function goChecklist(){
+    update(menu[1]);
+}
+
+function goPlayers(){
+    update(menu[2]);
+}
 //---------------ACTIONS------------------
 function openActionScreen(){
     actionScreen.classList.remove("fade-out");
@@ -746,11 +827,13 @@ function closeActionScreen(){
     action.innerText = "";
 };
 function openDice(){
-    updateActions(actions[0]);
+    //updateActions(actions[0]);
+    update(actions[0]);
     openActionScreen();
 };
 function openCoin(){
-    updateActions(actions[1]);
+    //updateActions(actions[1]);
+    update(actions[1]);
     openActionScreen();
 };
 function diceRoll(){
@@ -815,6 +898,10 @@ function startAdventure(){
 };
 
 //---------------EPISODES-------------------
+function goCurrentEpisode(){
+    update(episodes[lastEpisode + 1]);
+}
+
 function goLastEpisode(){
     update(episodes[lastEpisode]);
     lastEpisode --;
